@@ -1,11 +1,13 @@
 ### How to use Loop/Range in JSONPath with Kubeclt
 If you want to get an output that is filtered and formated as the below table:
  
-| master   |   node01        |
-|--------- |---------------- |
-| 4        |    4            |
+```
+  master   2      
+  node01   4     
+```
     
 You are going to need to use ranges in JSONPath. To print the format above, you would use a statement like this: 
+
 ```
    FOR EACH NODE 
           PRINT NODE NAME \t PRINT CPU COUNT \n

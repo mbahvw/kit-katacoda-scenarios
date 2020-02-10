@@ -6,25 +6,27 @@
           
     - You can run the below command to get all nodes and nicely format the output with a column header Named NODE:
   
-       `kubectl get nodes -o=custom-columns=NODE:.metadata.name`{{execute}} 
+       `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}} 
 
     - Here is the output of the above command:
-        
-         | NODE     |
-         |--------- |
-         | node01   |
-         | node01   |
-      
+
+      ```   
+          NAME   
+          master  
+          node01   
+      ```
 
      - You can add additional columns to the abouve command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma:
      
-       `kubectl get nodes -o=custom-columns=NODE:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
+    `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
 
   -  Take a look at the  output:
 
-     | NODE     |  CPU
-     |--------- |--------- |
-     | node01   |  4       |
-     | node01   |  4       |
+    
+    ```
+      NAME       CPU
+    
+       master      2
+       node01      4       
 
 

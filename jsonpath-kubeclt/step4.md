@@ -13,5 +13,11 @@
   `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
  
 - As you noticed the  output of the command does not provide a nice format: 
-        `for me to put the output here`
-- Hence the need to understand how to use iterations/loops as well as custom culoms in JsonPath.
+   
+   ```
+   master $ kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'
+   master node01 2 4master $
+   ```
+
+- Therefore, if you want to get nice output fomat, you would use either  JSONPath range and custom-columns with kubectl
+- We are going to cover those topics in the next steps

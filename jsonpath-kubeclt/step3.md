@@ -3,6 +3,9 @@
 
     `kubectl get nodes -o json`{{execute}}`
 
+- Clear your screen:
+   `clear`{{execute}}
+
 - If you pipe the above command to less and check the first few lines, you will  see  all the node objects/properties (execpt the apiVersion) belong to JSON dictionary list called items
 
   `kubectl get nodes -o json | less`{{execute}}
