@@ -1,13 +1,14 @@
-# Sort
+### Practice test/Quiz
+- Coming soon
+# Practice Suggestion:
+  - Use deployment manifest to deploy a pod with 6 replicas, resouce requests/limits, volumes
+  - Ask student to pods names and volumes and CPU, Memory and output the info as:
 
-Sorting can come in very handy:
+ ``` 
+   Name    VOLUME  CPU  MEM
+   pod      data    1   400
 
-  `kubectl get nodes --sort-by=.metadata.name`{{execute}}
+ ```
 
-  Here is the output: 
+- Additional exercise scenarios
 
-  ```
-   NAME     STATUS   ROLES    AGE   VERSION
-   master   Ready    master   80m   v1.14.0
-   node01   Ready    <none>   80m   v1.14.0
-  ```

@@ -1,21 +1,29 @@
-# How to use Loop/Range in JSONPath with Kubeclt
+# JsonPath and custom culumns
 
-Say for instance,  we want to get an output that is filtered and formated as the below table:
- 
-```
-  master   2
-  node01   4     
-```
-    
- We would use the range jsonpath operate to iterate through each item (node in this case) and use some tabulation `\t` as well as a new line `\n` to get the above ouptput.
+- If you want to get outputs with nicely formatted column headers, then JSONPath custon columns is the way to go.
+-  custom-columns with kubectl is an easier approach than the range/loops method
+-  Here is how custom columns works with kubectl:
+       `kubectl get nodes -o=custom-columns=<COLUMN NAME>:<JSON PATH`
+          
+- You can run the below command to get all nodes and nicely format the output with the column header as NAME:
+  
+       `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}} 
 
-To do this in JSONPATH, we would use the `range` and `end` as fallow: 
-```
-   {range  .items[*]} 
-        { .metadata.name} {"\t"}
-        {.status.capacity.cpu} {"\n"}
-   {end}
-```
+- Here is the output of the above command:
+    ```   
+          NAME   
+          master  
+          node01   
+    ```
 
-Let's finally merge the above command  into one line and passed with the kubectl jsonpath option parameter.  You run the command below to see the output:
-   `kubectl get nodes -o=jsonpath='{range  .items[*]}{ .metadata.name} {"\t"}{.status.capacity.cpu} {"\n"}{end}'`{{execute}}
+- You can add additional columns to the abouve command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column headed
+     
+`kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
+
+  -  Take a look at the  output:
+
+        ```
+        NAME        CPU
+        master       4
+        node01       4       
+        ```
