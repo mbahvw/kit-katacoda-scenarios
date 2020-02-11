@@ -1,6 +1,13 @@
-### JSON Path in Kubectl:
-- Kubectl support JSONPath Template - A JSONPath template is composed on expressions that are enclosed curly braces 
--  Some Pre-requisites is you need to know how to work with JasonPath/queries. Here is a good tutorial:
--  Good to first  know and practice Json Path on Kubernetes dataset 
--  know how to navigate through k8s datasets
+# JSONPath in Kubectl
+
+- Kubectl supports JSONPath Template - A JSONPath template is composed on expressions that are enclosed curly braces:
+
+    `kubectl get node -o=jsonpath='{EXPRESSION}'`
+
+- Some of the pre-requisite  to this lab is familiarity with JSONPath queries. Here are some quick refreshers:
+    -  [JSONPATH for Beginner](https://www.youtube.com/watch?v=Jxd_wLBxjAk)
+    -   [JSONPATH Wildcards](https://www.youtube.com/watch?v=Jxd_wLBxjAk)
+
+-  Knowledge and practice JSONPath on Kubernetes data set is also crucial
+
 
