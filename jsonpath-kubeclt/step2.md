@@ -1,2 +1,12 @@
-### Why Json Path in kubernetes
-- When working with production kubernetes clusters, you may deal with , 100s of nodes, 1000s objects,etc, and may be asked to query these objects and output them in human readable format. Kubectl  command tool is designed to do that, however the current built in tool  may not always give you the  output and format you desire, hence the need for jsonpath.
+# Why JSONPath in kubernetes
+
+-  Filter Through 1000s of Kubernetes resources and provide desired formatted output
+-  For instance if you want to get all your kubernetes nodes with their CPU capacity in a nice format like the one below:
+    
+    ```
+     NAME          CPU        
+     master         4          
+     node01         4          
+    
+    ```
+-  You would not able to find a kublectl command to provide a similar output. Howerver, you can use the kubectl command with JSONPATH to generate the above output.

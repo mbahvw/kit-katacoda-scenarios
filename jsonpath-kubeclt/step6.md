@@ -1,12 +1,29 @@
-### Sort
-Sorting can come in very handy:
+# JsonPath and custom culumns
 
-  `kubectl get nodes --sort-by=.metadata.name`{{execute}}
+- If you want to get outputs with nicely formatted column headers, then JSONPath custon columns is the way to go.
+-  custom-columns with kubectl is an easier approach than the range/loops method
+-  Here is how custom columns works with kubectl:
+       `kubectl get nodes -o=custom-columns=<COLUMN NAME>:<JSON PATH`
+          
+- You can run the below command to get all nodes and nicely format the output with the column header as NAME:
+  
+       `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}} 
 
-  Here is the output: 
+- Here is the output of the above command:
+    ```   
+          NAME   
+          master  
+          node01   
+    ```
 
-  ```
-   NAME     STATUS   ROLES    AGE   VERSION
-   master   Ready    master   80m   v1.14.0
-   node01   Ready    <none>   80m   v1.14.0
-  ```
+- You can add additional columns to the abouve command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column headed
+     
+`kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
+
+  -  Take a look at the  output:
+
+        ```
+        NAME        CPU
+        master       4
+        node01       4       
+        ```
