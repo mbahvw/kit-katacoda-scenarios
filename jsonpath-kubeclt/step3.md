@@ -9,7 +9,8 @@
    `kubectl get nodes`{{execute}}`
 
 2. Output the command in json:
-      `kubectl get nodes -o json`{{execute}}
+
+    `kubectl get nodes -o json`{{execute}}
 
 3. Create or form the jsonpath query. In out case, it would be:
     `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
@@ -28,4 +29,4 @@ The new output looks better, however  what if we want our output to look like th
     node01   4     
   ```
 
-- In order to get the get above output, we will need to use jsonpath loops or range.
+In order to get the get above output, we will need to use jsonpath loops or range.

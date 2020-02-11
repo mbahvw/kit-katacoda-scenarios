@@ -1,12 +1,13 @@
-### How to use Loop/Range in JSONPath with Kubeclt
-Say for instance,  you want to get an output that is filtered and formated as the below table:
+# How to use Loop/Range in JSONPath with Kubeclt
+
+Say for instance,  we want to get an output that is filtered and formated as the below table:
  
 ```
   master   2
   node01   4     
 ```
     
-You would the range jsonpath operate to iterate through each item (node in this case) and use some tabulation `\t` as well as a new line `\n` to get the above ouptput.
+We would use the range jsonpath operator to iterate through each item (node in this case) and use some tabulation `\t` as well as a new line `\n` carriage retun to get the above ouptput.
 
 To do this in JSONPATH, we would use the `range` and `end` as fallow: 
 ```

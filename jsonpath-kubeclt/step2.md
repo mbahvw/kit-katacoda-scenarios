@@ -10,3 +10,4 @@
     
     ```
 -  You would not able to find a kublectl command to provide a similar output. Howerver, you can use the kubectl command with JSONPATH to generate the above output.
+
