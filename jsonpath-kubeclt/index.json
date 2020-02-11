@@ -2,7 +2,7 @@
   "title": "Kubecl Intermediate Level - JSONPath and kubectl",
   "description": "Learn how to use JSONPath with kubectl ",
   "difficulty": "Intermediate",
-  "time": "60 minutes",
+  "time": "30 minutes",
   "details": {
     "steps": [
       {
@@ -48,11 +48,6 @@
         "title": "Step 9",
         "code": "clear.sh",
         "text": "step9.md"
-      },
-      {
-        "title": "Step 10",
-        "code": "clear.sh",
-        "text": "step10.md"
       }
     ],
     "intro": {
