@@ -1,4 +1,4 @@
-# JsonPath and custom culumns
+# JSONPath and custom culumns
 
 - If you want to get outputs with nicely formatted column headers, then JSONPath custon columns is the way to go.
 -  custom-columns with kubectl is an easier approach than the range/loops method

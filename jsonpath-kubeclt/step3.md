@@ -1,6 +1,4 @@
-# View and Interpret Kubeclt output in Json Format
-
-## How to use JSONPATH in Kubectl
+# How to use JSONPATH in Kubectl
 
 - Let's say you want to find the names of all your k8s nodes along with their CPU resources. In order to do, let's fallow the 4 steps below:
 
@@ -13,12 +11,16 @@
     `kubectl get nodes -o json`{{execute}}
 
 3. Create or form the jsonpath query. In out case, it would be:
+
+     
     `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
 
-4. Pass the query to the jsonpath option of kubeclt command:
-      `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
 
-As you may notice, the ouptut does not look pretty. What if we add `\n`newline return between the two JSONPath pairs as:
+4. Pass the query to the jsonpath option of kubeclt command;
+
+    `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
+
+As you may notice, the ouptut does not look pretty. What if we add `\n`newline return between the two JSONPath pairs as:	
 
   `kubectl get nodes -o=jsonpath='{.items[*].metadata.name}{"\n"}{.items[*].status.capacity.cpu}'`{{execute}}
 
