@@ -43,11 +43,6 @@
         "title": "Step 8",
         "code": "clear.sh",
         "text": "step8.md"
-      },
-      {
-        "title": "Step 9",
-        "code": "clear.sh",
-        "text": "step9.md"
       }
     ],
     "intro": {
