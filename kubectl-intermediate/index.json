@@ -6,71 +6,88 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Kubeclt - Context and Configuration",
+        "text": "step1.md",
+        "code": "clear.sh"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Create a new cluster and context",
+        "text": "step2.md",
+        "code": "clear.sh"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Switch between contexts",
+        "text": "step3.md",
+        "code": "clear.sh"
       },
       {
-        "title": "Step 4",
+        "title": "Install kubectx to quickly switch between context",
+        "code": "clear.sh",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Switch between namespaces",
+        "code": "clear.sh",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Install kubens to switch between namespaces",
+        "code": "clear.sh",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Find resource with --selector",
+        "code": "clear.sh",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Use jsonpath to find/filter resources",
+        "code": "clear.sh",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Use jq to for complex  json queries",
+        "code": "clear.sh",
         "text": "step9.md"
       },
       {
-        "title": "Step 10",
+        "title": "Format output with custom-columns",
+        "code": "clear.sh",
         "text": "step10.md"
       },
       {
-        "title": "Step 11",
+        "title": "Update resources",
+        "code": "clear.sh",
         "text": "step11.md"
       },
       {
-        "title": "Step 12",
+        "title": "Scale resources",
+        "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Step 13",
+        "title": "Patch resources",
+        "code": "clear.sh",
         "text": "step13.md"
       },
       {
-        "title": "Step 14",
+        "title": "Delete resources",
+        "code": "clear.sh",
         "text": "step14.md"
       },
       {
-        "title": "Step 15",
+        "title": "Interact with running pods",
+        "code": "clear.sh",
         "text": "step15.md"
       },
       {
-        "title": "Step 16",
+        "title": "Interact with nodes ",
+        "code": "clear.sh",
         "text": "step16.md"
       },
       {
-        "title": "Step 17",
+        "title": "TBD",
+        "code": "clear.sh",
         "text": "step17.md"
       }
     ],
