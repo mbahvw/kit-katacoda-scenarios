@@ -8,7 +8,7 @@ As you can see, there is currently one cluster named kubernetes and one user kub
 
 To see the current context run the below command:
 
-`kubectl config current-config`{{execute}}
+`kubectl config current-context`{{execute}}
 
 Let's  add a new context and switch to it.
 
