@@ -21,7 +21,7 @@ Let output all namespaces in the current cluster
 
 - Deploy a redis container into the backend namespace:
 
-  `kubectl run nginx --generator=run-pod/v1 --image=redis -n backend`{{execute}}
+  `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
 Currently, cluster is set to the default space.If you run the `kubectl get pods`{{execute}} , you will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
@@ -36,5 +36,9 @@ Currently, cluster is set to the default space.If you run the `kubectl get pods`
 Now, you can switch namespaces and save the namespace for all subsequent kubectl commands in that context. Let's switch to the frontend namespace:
 
 `kubectl config set-context --current --namespace=frontend`{{execute}}
+
+Let's get the pod using:
+
+`kubectl get pods`{{execute}}
 
 So, if you are constantly switching namespaces and want to avoid using the long kubectl above, `kubens`  utility will become handy. It is bundled with the `kubectx` command utility if you are installing the package using a package management tool.

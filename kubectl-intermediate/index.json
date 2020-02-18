@@ -32,6 +32,7 @@
       {
         "title": "Install kubens to switch between namespaces",
         "code": "clear.sh",
+        "courseData": "default-namespace.sh",
         "text": "step6.md"
       },
       {
