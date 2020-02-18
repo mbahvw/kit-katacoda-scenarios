@@ -1,6 +1,5 @@
-# Switch between contexts
-
 Lets output again the context:
+
 `kubectl config get-contexts`{{execute}}
 
 Now, let's switch to the dev-context
@@ -8,7 +7,8 @@ Now, let's switch to the dev-context
 
 
 Let's switch back to the kubenetes-admin@kubernetes context
-`kubectl config use-context`{{execute}}
+`kubectl config use-context kubernetes-admin@kubernetes`{{execute}}
 
-As you can see, switching back and forth between can be combersome specially when you are dealing with multiples clusters, and the same goes for namespaces.
-Let's visit namespaces in the next step.
+As you can see, switching back and forth between  cluster with the above kubectl command can be very combersome specially when you are dealing with multiples clusters.
+
+The alternative would be to install kubectx. Let's do that in the next step

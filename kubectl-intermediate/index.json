@@ -7,8 +7,7 @@
     "steps": [
       {
         "title": "Kubeclt - Context and Configuration",
-        "text": "step1.md",
-        "code": "clear.sh"
+        "text": "step1.md"
       },
       {
         "title": "Create a new cluster and context",
