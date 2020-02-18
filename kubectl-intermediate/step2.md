@@ -9,7 +9,7 @@ Let's check the cluster config and see if the cluster has been added
 
 Now, let's create a context and call it dev  and tie the kubernetes-admin user to it:
 
-`kubectl config set-context dev-context@development --cluster=development --user=kubernetes-admin`{{execut}}
+`kubectl config set-context dev-context@development --cluster=development --user=kubernetes-admin`{{execute}}
 
 Let's verify whether the context has been created
 `kubectl  config get-contexts`{{execute}}

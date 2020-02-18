@@ -21,13 +21,13 @@ Let output all namespaces in the current cluster
 
 - Deploy a redis container into the backend namespace:
 
-  `kubectl run nginx --generator=run-pod/v1 --image =redis -n backend`{{execute}}
+  `kubectl run nginx --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
 Currently, cluster is set to the default space.If you run the `kubectl get pods`{{execute}} , you will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
 - Let's get the nginx pod in the frontend namespace
 
-  `kubectl get pods --namespacefrontend`{{execute}}
+  `kubectl get pods --namespace frontend`{{execute}}
 
 - We can do the same to get the pod/s in the backend namespace
   
