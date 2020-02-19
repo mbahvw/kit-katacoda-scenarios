@@ -13,7 +13,7 @@
    
  ```
   NAME        CPU
-  master       4
+  master       2
   node01       4
  ```
  

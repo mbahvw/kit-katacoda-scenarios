@@ -1,4 +1,4 @@
-We just created a new cluster and a context  Let's check the cluster config and see if the cluster has been added
+We just created a new cluster and a context. Let's check the cluster config and see if the cluster has been added
 
 `kubectl config get-clusters`{{execute}}
 
