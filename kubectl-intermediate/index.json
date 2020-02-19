@@ -106,7 +106,7 @@
           "chmod": "+x"
         },
         {
-          "file": "deploy.yaml",
+          "file": "label-deploy.yaml",
           "target": "~/"
         }
       ]
