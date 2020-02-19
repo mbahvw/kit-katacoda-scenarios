@@ -38,6 +38,7 @@
       {
         "title": "Find resource with --selector",
         "code": "clear.sh",
+        "courseData": "deploy.sh",
         "text": "step7.md"
       },
       {
@@ -96,6 +97,19 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "kubectx.sh",
+          "target": "~/",
+          "chmod": "+x"
+        },
+        {
+          "file": "deploy.yaml",
+          "target": "~/",
+        }
+      ]
     }
   },
   "environment": {

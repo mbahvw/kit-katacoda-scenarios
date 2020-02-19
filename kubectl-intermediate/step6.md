@@ -1,6 +1,19 @@
 if you have installed kubectx using some package management tool, then kubens would be also installed. Otherwise install.
 
-Installing kubens
+In the step 4, we installed kubectx as well as kubens.
+To list all the namespaces, run:
+`kubens`{{execute}}
 
-Now that we have installed kubens, let's switch between namespace
-``{{execute}}
+Notice again, the current active namespace `default` is highlighted in yellow
+
+Now, let's switch  to the frontend namespace:
+
+`kubens frontend`{{execute}}
+
+let's list some pods:
+`kubectl get pods`{{execute}}
+
+There is no need to add the `-n` or `--namespace` flag.
+
+Let's switch back to the default namespace:
+`kubns defaut`{{execute}}
