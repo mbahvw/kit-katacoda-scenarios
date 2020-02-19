@@ -11,6 +11,7 @@
       },
       {
         "title": "Create a new cluster and context",
+        "courseData": "create-cluster.sh",
         "text": "step2.md",
         "code": "clear.sh"
       },
@@ -31,8 +32,8 @@
       },
       {
         "title": "Install kubens to switch between namespaces",
-        "code": "clear.sh",
         "courseData": "default-namespace.sh",
+        "code": "clear.sh",
         "text": "step6.md"
       },
       {
