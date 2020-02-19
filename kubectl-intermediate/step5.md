@@ -1,5 +1,5 @@
 
-Let's show namespaces in the current context
+Let's show all namespaces in the current context
 
 `kubectl get namespaces`{{execute}}
  
@@ -25,7 +25,7 @@ Currently, the current active namespace is the default namespace. If we run the
 
   `kubectl get pods --namespace frontend`{{execute}}
 
-- We can do the same to get the pod/s in the backend namespace
+- We can do the same to get the pods in the backend namespace
   
   `kubectl get pods -n backend`{{execute}}
 

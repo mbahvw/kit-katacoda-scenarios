@@ -1,8 +1,10 @@
-Lets output again the context:
+Let's show the context:
 
 `kubectl config get-contexts`{{execute}}
 
-Now, let's switch to the dev-context
+Notice that the current context is the `kubernetes-admin@kubernetes`
+
+Now, let's switch to the `dev-context@development` context
 `kubectl config use-context dev-context@development`{{execute}}
 
 
