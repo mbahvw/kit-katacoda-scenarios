@@ -54,23 +54,23 @@
         "text": "step9.md"
       },
       {
-        "title": "Use jq to for complex  json queries",
+        "title": "Format output with custom-columns",
         "code": "clear.sh",
         "text": "step10.md"
       },
       {
-        "title": "Format output with custom-columns",
+        "title": "Scale resources",
         "code": "clear.sh",
         "text": "step11.md"
       },
       {
-        "title": "Scale resources",
+        "title": "Update resources 1",
         "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Update resources",
+        "title": "Update resources 2",
         "code": "clear.sh",
         "text": "step13.md"
       },
@@ -85,14 +85,9 @@
         "text": "step15.md"
       },
       {
-        "title": "Interact with running pods",
+        "title": "Additional Resources",
         "code": "clear.sh",
         "text": "step16.md"
-      },
-      {
-        "title": "Interact with nodes",
-        "code": "clear.sh",
-        "text": "step17.md"
       }
     ],
     "intro": {

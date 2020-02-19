@@ -1,9 +1,2 @@
-You have successfully completed.
+You have successfully completed the scenario!!
 
-In this scenario, you have learned:
--  list
--  text
--  text
--  text
--  text
--  text

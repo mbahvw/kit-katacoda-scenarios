@@ -1,4 +1,4 @@
-Patching can be to partially update any k8s resources (nodes,pods, deployments,etc).  In this scenario, we are going to create an nginx container application using the kubectl and  with some label, then update the label.
+Patching can be to partially update any k8s resources (nodes,pods, deployments,etc).  In this step, we are going to create an nginx container application using the kubectl and  with some label, then update the label.
 
 - Let's create a pod in the default namespace and add the label env=prod.
   `kubectl run nginx --generator=run-pod/v1 --image=nginx --labels=env=prod`{{execute}}
