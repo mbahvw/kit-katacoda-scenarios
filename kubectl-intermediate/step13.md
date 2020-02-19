@@ -9,7 +9,7 @@ Before we proceed with the update, let's use  the same application in the previo
   
    `kubectl get pods`{{execute}} 
 
-   `kubeclt get deployment/nginx-deployment`{{execute}} 
+   `kubectl get deployment/nginx-deployment`{{execute}} 
    
    and check the Ready column 
 
