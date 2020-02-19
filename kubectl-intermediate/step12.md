@@ -4,7 +4,7 @@ In this scenario, we are going to create a deployment configuration with an ngin
 
   `kubectl create deployment nginx-deployment --image=nginx:1.16`{{execute}}
 
-- We can verify whether the resources have  been created:
+- We can verify whether the resources have been created:
   -  Verifying deployment:
   
      ` kubectl get deploy/nginx-deployment`{{execute}} 
@@ -19,7 +19,7 @@ In this scenario, we are going to create a deployment configuration with an ngin
   -  Verify whether deployment has been scaled: 
      `kubectl get pods`{{execute}} 
      
-      you are  add `-w` to watch  the scaling live.
+      you can pass the `-w` flag to watch  the scaling live.
       Clear  your screen
 - Let 's scale it back to 1 replica and move on to the next step:
   `kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}

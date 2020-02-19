@@ -15,7 +15,7 @@ There are many way to delete a resource using the  `kubectl delete` command. Let
     - Let's see if the pod is created:
       `kubectl get pods`{{execute}}
 
-3. There are ways to delete the above deployment
+3. There are two methods to delete the above deployment
    -  Using the manifest/resource file:
 
       `kubectl delete -f ~/nginx-deploy.yaml`{{execute}}

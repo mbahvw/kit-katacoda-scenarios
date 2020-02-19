@@ -1,21 +1,13 @@
 
-Let's output all namespaces in the current cluster
+Let's show namespaces in the current context
 
 `kubectl get namespaces`{{execute}}
  
- We can also use the shortened namepace opttion  `kubectl get ns`
+We can also use the shortened namepace opttion  `kubectl get ns`
 
- Let's create a couple namspaces and deploy container applications
- - create frontend namespace:
+Now, let's deploy a container pod  in each in the frontend and backend namespaces
 
-   `kubectl create namespace frontend`{{execute}}
-
- - Create backend namespace:
-  
- `kubectl create ns backend`{{execute}}
-
- Now, let's deploy a container pod  in each of the namespaces
- - Deploy an nginx container into the frontend namespace:
+- Deploy an nginx container into the frontend namespace:
   
  `kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
 
@@ -23,10 +15,11 @@ Let's output all namespaces in the current cluster
 
   `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
-Currently, cluster is set to the default space. If you run the
+Currently, the current active namespace is the default namespace. If we run the
+
  `kubectl get pods`{{execute}} 
  
- you will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
+ We will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
 - Let's get the nginx pod in the frontend namespace
 
@@ -36,12 +29,14 @@ Currently, cluster is set to the default space. If you run the
   
   `kubectl get pods -n backend`{{execute}}
 
-Now, you can switch namespaces and save the namespace for all subsequent kubectl commands in that context. Let's switch to the frontend namespace:
+Now, let's switch to the `frontend` namespaces and save it for all subsequent kubectl commands in that context:
 
 `kubectl config set-context --current --namespace=frontend`{{execute}}
 
-Let's get the pod using:
+Let's get the pods:
 
 `kubectl get pods`{{execute}}
 
-So, if you are constantly switching namespaces and want to avoid using the long kubectl command above, the `kubens`  utility will become handy. It is bundled with the `kubectx` command utility if installed using a package management tool.
+Now that you are in the fronted namespace, you do not need to add `--namespace` flag.
+
+So, if you are constantly switching namespaces and want to avoid using the long kubectl command above, the `kubens` utility will become handy. It is bundled with the `kubectx` command utility if installed using a package management tool.

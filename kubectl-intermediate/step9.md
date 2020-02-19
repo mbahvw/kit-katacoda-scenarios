@@ -1,11 +1,11 @@
-In the previous step,  we wanted to get an output that is filtered and formated as the below table:
+In the previous step,  we wanted to get an output that is formated as the below:
   
   ```
    master   2
    node01   4
    ```
 
-to achieve this, we would use the range jsonpath operator to iterate through each item (node in this case) and use some tabulation `\t` as well as a new line `\n` carriage retun to get the above ouptput.
+To achieve this, we would use the range jsonpath operator to iterate through each item (node in this case) and use some tabulation `\t` as well as a new line `\n` carriage retun to get the above ouptput.
 
 To do this in JSONPATH, we would use the `range` and `end` as fallow:
 

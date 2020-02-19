@@ -27,6 +27,7 @@
       },
       {
         "title": "Switch between namespaces",
+        "courseData": "create-namespace.sh",
         "code": "clear.sh",
         "text": "step5.md"
       },
@@ -64,6 +65,7 @@
       },
       {
         "title": "Scale resources",
+        "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step12.md"
       },

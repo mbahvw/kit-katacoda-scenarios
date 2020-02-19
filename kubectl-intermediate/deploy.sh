@@ -2,6 +2,6 @@
 
 cd ~/
 
-kubectl apply -f  label-deploy.yaml
+kubectl create -f  label-deploy.yaml
 
 
