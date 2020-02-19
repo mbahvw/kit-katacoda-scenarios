@@ -24,7 +24,7 @@ As you may notice, the ouptut does not look pretty. What if we add `\n`newline r
 
   `kubectl get nodes -o=jsonpath='{.items[*].metadata.name}{"\n"}{.items[*].status.capacity.cpu}'`{{execute}}
 
-The new output looks better, however if we want our output to look like this below:
+The new output looks a little better, however if we want our output to look like this below:
 
   ```
     master   2

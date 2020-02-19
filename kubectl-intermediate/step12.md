@@ -16,7 +16,7 @@ Before we proceed with the update, let's use  the same application in the previo
 -  Let's get all the pods name along with their current nginx image version:
    `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
--  Now, let's proceed with the update on the next step. We will add the `--record` flag to capture and record the history of our rollout
+-  Now, let's proceed with the update. We will add the `--record` flag to capture and record the history of our rollout
   
    `kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
    

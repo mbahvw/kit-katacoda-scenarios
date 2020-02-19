@@ -22,6 +22,6 @@ There are many way to delete a resource using the  `kubectl delete` command. Let
 
    - Using the delete resource type method:
 
-     `kubectl delete deployment nginx-deployment`{{execute}}
+     `kubectl delete deployment nginx-deployment`
 
 

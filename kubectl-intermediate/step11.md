@@ -21,3 +21,7 @@
       Clear  your screen
 - Let 's scale it back to 1 replica and move on to the next step:
   `kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}
+
+- Verify whether the application has been scaled down:
+  
+  `kubectl get pods`{{execute}}

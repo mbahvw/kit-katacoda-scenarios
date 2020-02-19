@@ -14,7 +14,7 @@ To switch between contexts, use `kubectx CONTEXT NAME`
 
    `kubectx dev-context@development`{{execute}}
 
-- Switch back to the kubernetes context
+- Let's switch back to the kubernetes context
   
    `kubectx kubernetes-admin@kubernetes`{{execute}}
 

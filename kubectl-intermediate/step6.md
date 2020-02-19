@@ -11,7 +11,7 @@ Now, let's switch  to the frontend namespace:
 
 `kubens frontend`{{execute}}
 
-let's list some pods
+Let's list the pods
 
 `kubectl get pods`{{execute}}
 

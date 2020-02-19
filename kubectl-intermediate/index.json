@@ -81,6 +81,7 @@
       },
       {
         "title": "Delete resources",
+        "courseData": "delete-deployment.sh",
         "code": "clear.sh",
         "text": "step15.md"
       },

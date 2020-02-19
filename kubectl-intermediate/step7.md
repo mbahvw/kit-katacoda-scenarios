@@ -16,7 +16,7 @@ We just deployed some pod containers in the background in the frontend namespace
 
        You can clear you screen.
    
-3. We can use the `--selector ` flag to find resources that do not have a particular. To illustrate, let's find nodes within our cluster that do **NOT** have this taint label `node-role.kubernetes.io/master`. 
+3. We can use the `--selector ` flag to find resources that do not have a specific label. To illustrate, let's find nodes within our cluster that do **NOT** have the taint label: `node-role.kubernetes.io/master`. 
 
    
    `kubectl get node --selector='!node-role.kubernetes.io/master'`{{execute}}

@@ -15,11 +15,11 @@ Now, let's deploy a container pod  in each in the frontend and backend namespace
 
   `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
-Currently, the current active namespace is the default namespace. If we run the
+Currently, the active namespace is the default namespace. If we run the
 
  `kubectl get pods`{{execute}} 
  
- We will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
+ We will not get any resource with the above command. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
 - Let's get the nginx pod in the frontend namespace
 
