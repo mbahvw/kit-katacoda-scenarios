@@ -1,8 +1,5 @@
-# Format output with custom-columns
-# Update resources
-
 - If we want to get outputs with nicely formatted column headers, then JSONPath custom columns is the best way to go.
--  custom-columns with kubectl method is an easier approach than the range/loops method
+-  custom-columns with kubectl method is an easier approach than the range/loops method 
 -  Here is how custom columns works with kubectl:
        `kubectl get nodes -o=custom-columns=<COLUMN NAME>:<JSON PATH`
 
@@ -16,7 +13,7 @@
     `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
 
 -  Take a look at the  output:
-
+   
     ```
         NAME        CPU
         master       4

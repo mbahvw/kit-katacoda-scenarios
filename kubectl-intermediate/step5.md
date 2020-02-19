@@ -1,12 +1,12 @@
 
-Let output all namespaces in the current cluster
+Let's output all namespaces in the current cluster
+
 `kubectl get namespaces`{{execute}}
  
  We can also use the shortened namepace opttion  `kubectl get ns`
 
- Let's create a couple namspaces and and deployment containers
+ Let's create a couple namspaces and deploy container applications
  - create frontend namespace:
-
 
    `kubectl create namespace frontend`{{execute}}
 
@@ -23,7 +23,10 @@ Let output all namespaces in the current cluster
 
   `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
-Currently, cluster is set to the default space.If you run the `kubectl get pods`{{execute}} , you will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
+Currently, cluster is set to the default space. If you run the
+ `kubectl get pods`{{execute}} 
+ 
+ you will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
 - Let's get the nginx pod in the frontend namespace
 
@@ -41,4 +44,4 @@ Let's get the pod using:
 
 `kubectl get pods`{{execute}}
 
-So, if you are constantly switching namespaces and want to avoid using the long kubectl above, `kubens`  utility will become handy. It is bundled with the `kubectx` command utility if you are installing the package using a package management tool.
+So, if you are constantly switching namespaces and want to avoid using the long kubectl command above, the `kubens`  utility will become handy. It is bundled with the `kubectx` command utility if installed using a package management tool.
