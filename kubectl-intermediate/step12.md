@@ -11,7 +11,7 @@ Before we proceed with the update, let's use  the same application in the previo
 
    `kubectl get deployment/nginx-deployment`{{execute}} 
    
-   Check the Ready column 
+   Check the Ready column, it should displays 5/5 when the scaling is completed.
 
 -  Let's get all the pods name along with their current nginx image version:
    `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}

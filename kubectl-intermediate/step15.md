@@ -12,7 +12,7 @@ There are many way to delete a resource using the  `kubectl delete` command. Let
    - Let's verify whether the depployment
       `kubectl get deployment nginx-deployment`{{execute}} 
     
-    - Let's see if the pod is created:
+   - Let's see if the pod is created:
       `kubectl get pods`{{execute}}
 
 3. There are two methods to delete the above deployment
