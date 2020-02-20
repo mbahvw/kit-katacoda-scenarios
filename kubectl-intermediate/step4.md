@@ -12,7 +12,7 @@ To switch between contexts, use `kubectx CONTEXT NAME`
 
 - Let's switch to the dev-context:
 
-   `kubectx dev-context@development`{{execute}}
+   `kubectx dev-context`{{execute}}
 
 - Let's switch back to the kubernetes context
   
