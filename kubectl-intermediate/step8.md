@@ -15,8 +15,7 @@
 
      `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
     
-    
-  -  Pass the query to the jsonpath option of kubeclt command:
+  - Pass the query to the jsonpath option of kubeclt command:
 
      `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
 
