@@ -1,7 +1,6 @@
-We just created a new cluster  named  `development`  and a new  context named `dev-context`. Let's check the cluster config and see if the cluster has been added:
+Let's  create a new context using the existing kubernetes-admin user and the kubernetes cluster.
 
-`kubectl config get-clusters`{{execute}}
-
+`kubectl config set-context dev-context --kubernetes --user=kubernetes-admin`{{execute}}
 
 Let's verify whether the context has been created
 `kubectl  config get-contexts`{{execute}}
