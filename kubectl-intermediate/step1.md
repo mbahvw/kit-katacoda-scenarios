@@ -4,7 +4,7 @@ let's review the current cluster configuration:
 
 `kubectl config view`{{execute}}
 
-Let's run the command below to list the cluster
+Let's run the command below to list the cluster:
 `kubectl config get-clusters`{{execute}}
 
 As you can see, there is currently one cluster named kubernetes and one user kubernetes-admin. In this case, the context is kubernetes-admin@kubernetes.

@@ -2,7 +2,7 @@ Let's now install kubectx. List the content of the home and run the kubectx.sh s
 
 `ls -la && ./kubectx.sh`{{execute}}
 
-When the installion is done, run the kubectx to list all the contexts
+When the installion is done, run the kubectx to list all the contexts:
 
 `kubectx`{{execute}}
 
@@ -14,7 +14,7 @@ To switch between contexts, use `kubectx CONTEXT NAME`
 
    `kubectx dev-context`{{execute}}
 
-- Let's switch back to the kubernetes context
+- Let's switch back to the kubernetes context:
   
    `kubectx kubernetes-admin@kubernetes`{{execute}}
 

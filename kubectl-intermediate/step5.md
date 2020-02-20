@@ -1,25 +1,25 @@
 
-Let's show all namespaces in the current context
+Let's show all namespaces in the current context:
 
 `kubectl get namespaces`{{execute}}
  
-You can also use the shortened namepace option  `kubectl get ns`
+You can also use the `ns` option which is short for namepace `kubectl get ns`
 
-Now, let's deploy a container pod  in each in the frontend and backend namespaces
+Now, let's deploy a container pod in the frontend and backend namespaces:
 
-- Deploy an nginx container into the frontend namespace:
+-  Let's deploy a single  nginx container inthe frontend namespace using the `--generator` flag. 
   
  `kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
 
-- Deploy a redis container into the backend namespace:
+- Deploy a redis container into the backend namespace: `--restart=Never`
 
   `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
 
-Currently, the active namespace is the default namespace. If we run the
+Currently, the active namespace is the default namespace. If we run the 
 
  `kubectl get pods`{{execute}} 
  
- We will not get any resource with the above command. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME`  or `-n` flag.
+ We will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME`  or `-n` flag.
 
 - Let's try to get the nginx pod from the frontend namespace
 

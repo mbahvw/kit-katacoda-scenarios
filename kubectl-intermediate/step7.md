@@ -21,3 +21,4 @@ We just deployed some pod containers in the background in the frontend namespace
 
 
 As you can see, ``--selector` could come in very handy when sorting filtering pods with different labels.
+

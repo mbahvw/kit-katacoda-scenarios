@@ -1,7 +1,7 @@
 In this step, we are going to update the nginx image from nginx:1.16 to nginx:1.17
 Before we proceed with the update, let's use  the same application in the previous step and scale it to 5 replicas again.
 
-- So, let's scale the application
+- So, let's scale the application:
 
   `kubectl scale deployment/nginx-deployment --replicas=5`{{execute}}
 
@@ -20,6 +20,6 @@ Before we proceed with the update, let's use  the same application in the previo
   
    `kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
    
-   Alternatively, you can achieve the same update result by editing the deployment manifest/config either manually or using the `kubeclt edit deployment DEPLOYMENT NAME` and nagigate to the .spec.template.spec.container[].image, change the image version and save.
+   Alternatively, you can achieve the same update result by editing the deployment manifest/config either manually or using the `kubeclt edit deployment DEPLOYMENT NAME` and navigate to .spec.template.spec.container[].image, change the image version and save.
 
 Click on the Continue button to move on to the next step with the update.

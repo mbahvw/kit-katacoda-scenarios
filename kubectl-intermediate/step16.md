@@ -4,3 +4,4 @@ Thank you going through this scenario. Here are some additional resources that y
 - Introduction to Kubectl on [KubeAcademy](https://kube.academy/lessons/introduction-to-kubectl)
 - [Kubernetes Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
+- [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/#generators)
