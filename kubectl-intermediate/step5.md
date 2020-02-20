@@ -19,7 +19,7 @@ Currently, the active namespace is the default namespace. If we run the
 
  `kubectl get pods`{{execute}} 
  
- We will not get any resource with the above command. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
+ We will not get any resource with the above command. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME`  or `-n` flag.
 
 - Let's try to get the nginx pod from the frontend namespace
 
