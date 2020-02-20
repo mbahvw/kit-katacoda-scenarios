@@ -3,7 +3,7 @@ Let's show all namespaces in the current context
 
 `kubectl get namespaces`{{execute}}
  
-We can also use the shortened namepace opttion  `kubectl get ns`
+You can also use the shortened namepace option  `kubectl get ns`
 
 Now, let's deploy a container pod  in each in the frontend and backend namespaces
 
@@ -21,7 +21,7 @@ Currently, the active namespace is the default namespace. If we run the
  
  We will not get any resource with the above command. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME` flag.
 
-- Let's get the nginx pod in the frontend namespace
+- Let's try to get the nginx pod from the frontend namespace
 
   `kubectl get pods --namespace frontend`{{execute}}
 
