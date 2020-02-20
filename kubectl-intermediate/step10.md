@@ -9,7 +9,7 @@
 
     `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
 
-- Take a look at the  output:
+- The new output looks something similar to the below output:
    
  ```
   NAME        CPU
