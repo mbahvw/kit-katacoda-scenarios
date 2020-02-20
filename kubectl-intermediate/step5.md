@@ -33,7 +33,7 @@ Now, let's switch to the `frontend` namespaces and save it for all subsequent ku
 
 `kubectl config set-context --current --namespace=frontend`{{execute}}
 
-Let's get the pods:
+You can list the pods in that namespace:
 
 `kubectl get pods`{{execute}}
 
