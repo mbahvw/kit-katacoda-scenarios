@@ -22,4 +22,4 @@ Before we proceed with the update, let's use  the same application in the previo
    
    Alternatively, you can achieve the same update result by editing the deployment manifest/config either manually or using the `kubeclt edit deployment DEPLOYMENT NAME` and nagigate to the .spec.template.spec.container[].image, change the image version and save.
 
-Click on the next step to continue with the update.
+Click on the Continue button to move on to the next step with the update.
