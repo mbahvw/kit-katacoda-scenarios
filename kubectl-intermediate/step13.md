@@ -10,7 +10,7 @@
 -  To undo the update, run:
    `kubectl rollout undo deployment/nginx-deployment`{{execute}}
 
--  Watch the stat again:
+-  Watch the status again:
    
    `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 

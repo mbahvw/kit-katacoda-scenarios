@@ -8,13 +8,11 @@ We just deployed some pod containers in the background in the frontend namespace
  
 2. Now, let's  find all the application container pods that have the label `app:web` in the frontend namespace:
    
-   `kubectl get pods -n frontend --selector=app=web`{{execute}} 
+    `kubectl get pods -n frontend --selector=app=web`{{execute}} 
 
-You can also use the `-l` flag. Let's get all the application containers that are lebeled with `app=haproxy`
+    You can also use the `-l` flag. Let's get all the application containers that are lebeled with `app=haproxy`
 
-   `kubectl get pods -n frontend -l app=haproxy`{{execute}}
-
- 
+    `kubectl get pods -n frontend -l app=haproxy`{{execute}}
    
 3. We can use the `--selector ` flag to find resources that do not have a specific label. To illustrate, let's find nodes within our cluster that do **NOT** have the taint label: `node-role.kubernetes.io/master`. 
 
