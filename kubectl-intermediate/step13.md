@@ -14,7 +14,7 @@
    
    `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 
--   Adter the rollout is completed, we can get all the pods name with the older nginx image version again:
+-   After the rollout is completed, we can get all the pods name with the older nginx image version again:
    
    `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
