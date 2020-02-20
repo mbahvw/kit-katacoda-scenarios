@@ -63,13 +63,13 @@
         "text": "step11.md"
       },
       {
-        "title": "Update resources 1",
+        "title": "Update resources 1 of 2",
         "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Update resources 2",
+        "title": "Update resources 2 of 2",
         "code": "clear.sh",
         "text": "step13.md"
       },
