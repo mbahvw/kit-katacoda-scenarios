@@ -1,6 +1,6 @@
 You can use the `--selector` flag to filter and find resource based on their labels. Let's see how that works:
 
-We just deployed some pod containers in the background in the frontend namespace and added different labels to these pods. Please allow a minute or two while the pods are being created.
+We just deployed some pod containers in the background in the frontend namespace and added different labels to these pods. Please allow a minute or two for the deployment to complete.
 
 1. Let's first show  the pods labels:
 
