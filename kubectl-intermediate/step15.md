@@ -7,7 +7,7 @@ There are many way to delete a resource using the  `kubectl delete` command. Let
    `kubectl create deployment nginx-deployment --image=nginx --dry-run -o yaml >~/nginx-deploy.yaml`{{execute}}
    
    - Now, let create the deployment:
-      `kubectl create -f ~/nginx-deploy.yaml`{{execute}}
+      `kubectl apply -f ~/nginx-deploy.yaml`{{execute}}
     
    - Let's verify whether the depployment
       `kubectl get deployment nginx-deployment`{{execute}} 
