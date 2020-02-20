@@ -3,11 +3,11 @@
   `kubectl create deployment nginx-deployment --image=nginx:1.16`{{execute}}
 
 - We can verify whether the resources have been created:
-  -  Verifying deployment:
+  -  Let's verify the deployment:
   
      ` kubectl get deploy/nginx-deployment`{{execute}} 
 
-  - Verifying POD:
+  -  We can also verify whether the Pods have been created:
     `kubectl get pods`{{execute}}
 
 - Now let's scale the deployment to 5 replicas:
