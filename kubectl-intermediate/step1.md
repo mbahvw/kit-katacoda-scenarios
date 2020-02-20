@@ -4,7 +4,7 @@ let's review the current cluster configuration:
 
 `kubectl config view`{{execute}}
 
-To see the clusters only, let run this command:
+Let's run the command below to  only list the clusters
 
 `kubectl config get-clusters`{{execute}}
 
