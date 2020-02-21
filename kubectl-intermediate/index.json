@@ -41,6 +41,7 @@
       },
       {
         "title": "Install kubens to switch between namespaces",
+        "courseData": "default-namespace.sh"
         "code": "clear.sh",
         "text": "step8.md"
       },
@@ -71,12 +72,12 @@
         "text": "step13.md"
       },
       {
-        "title": "Update resources Part I",
+        "title": "Update resources - Part I",
         "code": "clear.sh",
         "text": "step14.md"
       },
       {
-        "title": "Update resources Part II",
+        "title": "Update resources - Part II",
         "code": "clear.sh",
         "text": "step15.md"
       },

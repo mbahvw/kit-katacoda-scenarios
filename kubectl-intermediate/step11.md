@@ -16,6 +16,6 @@ To do this in JSONPATH, we would use the `range` and `end`  operators as fallow:
 {end}
 ```
 
-Let's finally merge the above command into one line and passit to the kubectl jsonpath option parameter. Below, is the result of the command and let's run it and inspect the output:
+Let's finally merge the above command into one line and pass it to the kubectl jsonpath option parameter. Below, is the result of the command. Go ahead and type into the terminal or click to run it and inspect its output:
 
 `kubectl get nodes -o=jsonpath='{range  .items[*]}{ .metadata.name} {"\t"}{.status.capacity.cpu} {"\n"}{end}'`{{execute}}

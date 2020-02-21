@@ -16,15 +16,15 @@ Now let's scale the deployment to 5 replicas:
   
 `kubectl scale deploy/nginx-deployment --replicas=5`{{execute}}
 
-Verify whether deployment has been scaled: 
+Verify whether pods has been scaled: 
 `kubectl get pods`{{execute}} 
 
 You can pass the `-w` flag to watch  the scaling live.
 
-Let 's scale it back to 1 replica and move on to the next step:
+Let's now scale the deployment back to 1 replica:
 
 `kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}
 
-Verify whether the application has been scaled down:
+Verify whether the pods has been scaled down to 1 replicas:
   
 `kubectl get pods`{{execute}}

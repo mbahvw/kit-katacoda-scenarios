@@ -21,11 +21,13 @@ Let's now switch back to the default namespace:
 
 Clean up the environment by deleting the pods we deployed  in previous step. 
 
-Type or click below:
+Type or click on the command below:
 
 `kubectl delete pod nginx -n frontend`{{execute}}
 
-`kubectl delete pod nginx -n  backend`{{execute}}
+Wait for the prompt as it may take some time.
+
+`kubectl delete pod redis -n  backend`{{execute}}
 
 Verify that the pods no longer exist before moving on to the next step by typing:
 

@@ -4,11 +4,11 @@ Let's display the contexts again:
 
 Notice that the current active context is  `kubernetes-admin@kubernetes`
 
-To switch to the `dev-context` context, run the below command:
+To switch to the `dev-context` context, type the below command:
 
 `kubectl config use-context dev-context`{{execute}}
 
-If you display the contexts, you will find the active context is set to  `dev-context`:
+If we display the contexts now, the new active context will be set to  `dev-context` context. Type the below command to show the context:
 
 `kubectl config get-contexts`{{execute}}
 
