@@ -6,7 +6,7 @@ Let's deploy a single nginx container application in the `frontend` namespace us
 
 *The `--generator` flag tells the `kuebctl run` command to pin the resource to a specific apiVersion, in this case apiVersion:v1 and kind:pod.*
 
-Let's use another method to deploy a single redis container into the backend namespace using  `--restart=Never`. Type or click on the below command:
+Let's use another method to deploy a single redis container into the `backend` namespace using  `--restart=Never`. Type or click on the below command:
 
 `kubectl run redis  --image=redis -n backend --restart=Never `{{execute}}
 
