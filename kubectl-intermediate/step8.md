@@ -1,11 +1,10 @@
-In the step 4, we installed kubectx as well as kubens.
-To list all the namespaces, type:
+In step 4, we installed kubectx as well as kubens. To list all the namespaces, type:
 
 `kubens`{{execute}}
 
 Notice again, the current active namespace `default` is highlighted in yellow
 
-Now, let's switch  to the frontend namespace by tyuping:
+Now, let's switch  to the frontend namespace by typing:
 
 `kubens frontend`{{execute}}
 

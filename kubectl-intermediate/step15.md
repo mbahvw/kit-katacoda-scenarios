@@ -1,4 +1,4 @@
-We can watch rolling update status of `nginx-deployment` deployment until completion:
+We can watch the rolling update status of `nginx-deployment` deployment until completion:
 
 `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 

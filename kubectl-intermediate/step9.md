@@ -6,7 +6,7 @@ Let's get all the pods with their labels by typing the command below:
 
 `kubectl get pods -n frontend --show-labels`{{execute}}
  
-Now, let's  find all the container pods that have the label `app:web` in the frontend namespace:
+Now, let's  find all the container pods that have the label `app:web` in the `frontend` namespace:
    
 `kubectl get pods -n frontend --selector=app=web`{{execute}} 
 
