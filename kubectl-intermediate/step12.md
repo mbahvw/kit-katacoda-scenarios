@@ -9,11 +9,11 @@ Now, let's assume we want to  get all nodes within our cluster and nicely format
 
 `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}}
 
-You can add additional columns to the above command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column headed. Type the command into your terminal or click on to execute it:
+You can add additional columns to the above command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column header. Type the command into your terminal or click to execute it:
 
 `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
 
-The new output looks something similar to the below output:
+The new output may look something similar to the below output:
    
 ```
 NAME        CPU
@@ -21,6 +21,6 @@ master       2
 node01       4
 ```
  
-In step 9, we deployed multiple pods, let's find all the pods that were deployed with the label `image:nginx:1.16` and output them in a tabulated format with column headers POD_NAME and IMAGE_VER:
+In step 9, we deployed multiple pods, so let's find all the pods that were deployed with the label `image:nginx:1.16` and output them in a tabulated format with column headers POD_NAME and IMAGE_VER:
 
 `kubectl get pods -n frontend -o custom-columns=POD_MANE:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}
