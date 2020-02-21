@@ -1,27 +1,21 @@
-- Let's deploy an nginx application in the default namespace using the kubectl command line method or the imperative method
-
-  `kubectl create deployment nginx-deployment --image=nginx:1.16`{{execute}}
-
-- We can verify whether the resources have been created:
-  -  Let's verify the deployment:
+In the previous step,  we wanted to get an output that is formated as the one below:
   
-     ` kubectl get deploy/nginx-deployment`{{execute}} 
+```
+master   2
+node01   4
+```
 
-  -  We can also verify whether the Pods have been created:
-    `kubectl get pods`{{execute}}
+To achieve this, we would use the range jsonpath operator to iterate through each item (nodes in this case) and use some tabulation `\t` as well as a new line `\n` characters  to get the above output.
 
-- Now let's scale the deployment to 5 replicas:
-  
-  `kubectl scale deploy/nginx-deployment --replicas=5`{{execute}}
+To do this in JSONPATH, we would use the `range` and `end`  operators as fallow:
 
-  -  Verify whether deployment has been scaled: 
-     `kubectl get pods`{{execute}} 
-     
-      you can pass the `-w` flag to watch  the scaling live.
-      Clear  your screen
-- Let 's scale it back to 1 replica and move on to the next step:
-  `kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}
+```
+{range  .items[*]}
+    { .metadata.name} {"\t"}
+    {.status.capacity.cpu} {"\n"}
+{end}
+```
 
-- Verify whether the application has been scaled down:
-  
-  `kubectl get pods`{{execute}}
+Let's finally merge the above command into one line and passit to the kubectl jsonpath option parameter. Below, is the result of the command and let's run it and inspect the output:
+
+`kubectl get nodes -o=jsonpath='{range  .items[*]}{ .metadata.name} {"\t"}{.status.capacity.cpu} {"\n"}{end}'`{{execute}}

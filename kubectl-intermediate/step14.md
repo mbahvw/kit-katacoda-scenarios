@@ -1,16 +1,25 @@
-Patching can be to partially update any k8s resources (nodes,pods, deployments,etc).  In this step, we are going to create an nginx container application using the kubectl and  with some label, then update the label.
+In this step, we are going to update the nginx image from nginx:1.16 to nginx:1.17
+Before we proceed with the update, let's use  the same application we deployed in the previous step and scale it to 5 replicas again.
 
-- Let's create a pod in the default namespace and add the label env=prod.
-  `kubectl run nginx --generator=run-pod/v1 --image=nginx --labels=env=prod`{{execute}}
+So, let's scale the application up to 5 replicas:
 
-- We can verify whether the application has been deployed with the label
-  `kubectl get pod nginx --show-labels`{{execute}}
+`kubectl scale deployment/nginx-deployment --replicas=5`{{execute}}
 
-- Now, let's update the label to env=dev using the patch command
+We can verify whether the application has been scaled:
+  
+`kubectl get pods`{{execute}} 
 
-  `kubectl patch pod nginx -p '{"metadata":{"labels":{"env":"dev"}}}'`{{execute}}
+`kubectl get deployment/nginx-deployment`{{execute}} 
+   
+Check the Ready column in the deployment output, it should display 5/5 when the scaling is completed.
 
-  - let's verify with the `--show-labels` flag
-    `kubectl get pod nginx --show-labels`{{execute}}
+Let's get all the pods name along with their current nginx image version:
+`kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
-- Alternatively, you can use the `kubectl edit` command to manually edit  the resource. 
+Now, let's proceed with the update. We will add the `--record` flag to capture and record the history of our rollout
+  
+`kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
+   
+Alternatively, you can achieve the same update result by editing the deployment manifest/config either manually or using the `kubeclt edit deployment DEPLOYMENT NAME` and navigate to .spec.template.spec.container[].image, change the image version and save.
+
+Click on the Continue button to move on to the next step with the update.

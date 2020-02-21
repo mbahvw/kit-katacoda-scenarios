@@ -1,25 +1,22 @@
-In this step, we are going to update the nginx image from nginx:1.16 to nginx:1.17
-Before we proceed with the update, let's use  the same application in the previous step and scale it to 5 replicas again.
+If we want to get outputs with nicely formatted column headers, then JSONPath's custom columns is the best way to go.
+Custom-columns with kubectl method is an easier approach than the range/loops method.
 
-- So, let's scale the application:
+Now, Let assume we want to  get all nodes and nicely format the output with a column header called NAME, to do, we can can the below command:
 
-  `kubectl scale deployment/nginx-deployment --replicas=5`{{execute}}
+`kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}}
 
--  We can verify whether the application has been scaled:
-  
-   `kubectl get pods`{{execute}} 
+You can add additional columns to the abouve command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column headed:
 
-   `kubectl get deployment/nginx-deployment`{{execute}} 
+`kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
+
+The new output looks something similar to the below output:
    
-   Check the Ready column in the deployment output, it should display 5/5 when the scaling is completed.
+```
+NAME        CPU
+master       2
+node01       4
+```
+ 
+In step 7, we deployed multiple pods, let's find the pods that are deployed with the image nginx:1.16 and output in tabulated format with column header POD_NAME and IMAGE_VER:
 
--  Let's get all the pods name along with their current nginx image version:
-   `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
-
--  Now, let's proceed with the update. We will add the `--record` flag to capture and record the history of our rollout
-  
-   `kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
-   
-   Alternatively, you can achieve the same update result by editing the deployment manifest/config either manually or using the `kubeclt edit deployment DEPLOYMENT NAME` and navigate to .spec.template.spec.container[].image, change the image version and save.
-
-Click on the Continue button to move on to the next step with the update.
+`kubectl get pods -n frontend -o custom-columns=POD_MAME:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}

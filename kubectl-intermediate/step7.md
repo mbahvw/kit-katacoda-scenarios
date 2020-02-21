@@ -1,24 +1,13 @@
-You can use the `--selector` flag to filter and find resource based on their labels. Let's see how that works:
 
-We just deployed some pod containers in the background in the frontend namespace and added different labels to these pods. Please allow a minute or two for the deployment to complete.
+Now that we have containers deployed in different namespaces, to access these containers,  we have to either add `--namespace` flag or `-n`  for short with the `kubeclt get pods` command, or switch to the namespace where the containers live and the above command without the `--namespace` flag.
 
-1. Let's first show  the pods labels:
+Let's  explore how to switch between namespaces, by switching to the `frontend` namespace:
 
-    `kubectl get pods -n frontend --show-labels`{{execute}}
- 
-2. Now, let's  find all the application container pods that have the label `app:web` in the frontend namespace:
-   
-    `kubectl get pods -n frontend --selector=app=web`{{execute}} 
+`kubectl config set-context --current --namespace=frontend`{{execute}}
 
-    You can also use the `-l` flag. Let's get all the application containers that are lebeled with `app=haproxy`
+We can list the pods in that namespace without the `--namespace` flag:
 
-    `kubectl get pods -n frontend -l app=haproxy`{{execute}}
-   
-3. We can use the `--selector ` flag to find resources that do not have a specific label. To illustrate, let's find nodes within our cluster that do **NOT** have the taint label: `node-role.kubernetes.io/master`. 
-
-   
-   `kubectl get node --selector='!node-role.kubernetes.io/master'`{{execute}}
+`kubectl get pods`{{execute}}
 
 
-As you can see, ``--selector` could come in very handy when sorting filtering pods with different labels.
-
+So, if you are constantly switching between namespaces and want to avoid using the long kubectl command above, then the `kubens` utility  becomes handy. It is bundled with the `kubectx` command utility when installed using a package management tool (yum, apt, dnf, brew,etc.).

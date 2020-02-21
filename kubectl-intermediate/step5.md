@@ -1,42 +1,30 @@
+# Create namespaces
 
-Let's show all namespaces in the current context:
+There are a couple methods to create a namespace. The first and easier method is to use the kubectl commmand. This method is also known as the imperative method. The second method is to use a yaml manifest file, which is also known as the declarative method. Let's expolore these 2 methods.
 
-`kubectl get namespaces`{{execute}}
- 
-You can also use the `ns` option which is short for namepace `kubectl get ns`
+For the imperative method, let's create a new namespace called `frontend`  via the `kubecctl` command. Type or click below:
 
-Now, let's deploy a container pod in the frontend and backend namespaces:
+`kubectl create namespace frontend`{{execute}}
 
--  Let's deploy a single  nginx container inthe frontend namespace using the `--generator` flag. 
-  
- `kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
+You can replace the  `namespace`option in the command with the  `ns` option, which is its short name.
 
-- Deploy a redis container into the backend namespace: `--restart=Never`
+For the declarative method, we have two options to create the manifest file:
 
-  `kubectl run redis --generator=run-pod/v1 --image=redis -n backend`{{execute}}
+The first option is to use your favorite text editor and manually create a yaml manifest with the namespace specs.
 
-Currently, the active namespace is the default namespace. If we run the 
+The second option is to generate the manifest via the kubectl command. Let's create another new namespace named `backend` with this option. Type the below command and redirect to a file:
+`kubectl create namespace backend -o yaml --dry-run >~/ns-backend.yaml`{{execute}}
 
- `kubectl get pods`{{execute}} 
- 
- We will not get any resource. In order to show the newly created pods, we need to add `--namespace NAMESPACE-NAME`  or `-n` flag.
+*The `--dry-run` flag allows you preview the object without creating it.
 
-- Let's try to get the nginx pod from the frontend namespace
+Let's erify whether the manifest has been created:
 
-  `kubectl get pods --namespace frontend`{{execute}}
+`cat ~/ns-backend.yaml`{{execute}}
 
-- We can do the same to get the pods in the backend namespace
-  
-  `kubectl get pods -n backend`{{execute}}
+Next, Use the `kubectl apply -f` command with the file to create the namespace object or resource as follow:
 
-Now, let's switch to the `frontend` namespaces and save it for all subsequent kubectl commands in that context:
+`kubectl apply -f ~/ns-backend.yaml`{{execute}}
 
-`kubectl config set-context --current --namespace=frontend`{{execute}}
+Let's display all namespaces and see if the  frontend and backend have been created:
+`kubectl get ns`{{execute}}
 
-You can list the pods in that namespace:
-
-`kubectl get pods`{{execute}}
-
-Now that you are in the fronted namespace, you do not need to add `--namespace` flag.
-
-So, if you are constantly switching namespaces and want to avoid using the long kubectl command above, the `kubens` utility will become handy. It is bundled with the `kubectx` command utility if installed using a package management tool.

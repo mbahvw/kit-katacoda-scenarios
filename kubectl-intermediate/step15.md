@@ -1,27 +1,27 @@
-There are many way to delete a resource using the  `kubectl delete` command. Let's look at few:
+We can watch rolling update status of `nginx-deployment` deployment until completion:
 
-1. Let's delete the pod that we deploy in the previous step:
-   `kubectl delete pod nginx`{{execute}}
+`kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 
-2. Let's create a deployment using a manifest/resource file or the declarative method:
-   `kubectl create deployment nginx-deployment --image=nginx --dry-run -o yaml >~/nginx-deploy.yaml`{{execute}}
+To show the output of the rollout history, run the below command:
+  
+`kubectl rollout history deployment/nginx-deployment`{{execute}}
+
+Now let's output the pods name with their new nginx image version:
+  
+`kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
+
+Notice here, the nginx image is nginx:1.17 now
+
+To undo the update, run:
+
+`kubectl rollout undo deployment/nginx-deployment`{{execute}}
+
+Watch the status again:
    
-   - Now, let create the deployment:
-      `kubectl apply -f ~/nginx-deploy.yaml`{{execute}}
-    
-   - Let's verify whether the depployment
-      `kubectl get deployment nginx-deployment`{{execute}} 
-    
-   - Let's see if the pod is created:
-      `kubectl get pods`{{execute}}
+`kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 
-3. There are two methods to delete the above deployment
-   -  Using the manifest/resource file:
+After the rollout is completed, the image version will be rolled back to nginx:1.16. Let's output the pod names and image version:
+   
+`kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
-      `kubectl delete -f ~/nginx-deploy.yaml`{{execute}}
-
-   - Using the delete resource type method:
-
-     `kubectl delete deployment nginx-deployment`
-
-
+To update with a specific version, run the `kubectl rollout history` command to show the different update revision made, then pick the revision number you want to update your application to. Run the kubec   tl command with the `--to-revision=n`flag, where `n=revision number` from the rollout history output. Here is the output of that kubectl command: `kubectl rollout undo --to-revision=n`.

@@ -1,22 +1,33 @@
-- If we want to get outputs with nicely formatted column headers, then JSONPath's custom columns is the best way to go.
--  custom-columns with kubectl method is an easier approach than the range/loops method 
+Pre-requisite: familiarity with json and josnpath is crucial as well as famility with outputing k8s resource into json/yaml `kubectl get resouce -o json/yaml`.
 
-- Let assume we want to  get all nodes and nicely format the output with the column header NAME:
+The `-o jsonpath` flag with the kubectl command allows you to filter resources and display them in the way you desire.
+Let's say you want to find the names of all your k8s nodes along with their CPU resources. In order to do, let's fallow the 4 steps below:
+  
+  - Identify the kubeclt required to provide the info needed, in this case:
 
-    `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}}
+      `kubectl get nodes`{{execute}}`
 
-- You can add additional columns to the abouve command by adding JSONPath pairs (COLUMN HEADER:.metadata.name) separated by a comma. In the below command example, we are adding CPU column headed
+  - Output the command in json:
 
-    `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
+      `kubectl get nodes -o json`{{execute}}
 
-- The new output looks something similar to the below output:
-   
- ```
-  NAME        CPU
-  master       2
-  node01       4
- ```
- 
-- In step 7, we deployed multiple pods, let's find the pods that are deployed with the image nginx:1.16 and output in tabulated format with column header POD_NAME and IMAGE_VER:
+  - Create or form the jsonpath query. In our case, it would be:
 
-  `kubectl get pods -n frontend -o custom-columns=POD_MAME:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}
+     `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
+    
+  - Pass the query to the jsonpath option of the kubeclt command:
+
+     `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
+
+As you may notice, the ouptut does not look pretty. What if we add `\n` newline character between the two JSONPath pairs as:
+
+  `kubectl get nodes -o=jsonpath='{.items[*].metadata.name}{"\n"}{.items[*].status.capacity.cpu}{"\n"}'`{{execute}}
+
+The new output looks a little better, however if we want our output to look like the below output:
+
+```
+master   2
+node01   4
+```
+
+We will then need to use jsonpath range/loop.

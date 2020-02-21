@@ -1,18 +1,18 @@
 
-A context in kubernetes is what ties a user  to a cluster, and as a kubernetes user, you may have access to multiple clusters. 
-let's review the current cluster configuration:
+A context in kubernetes is what ties a user to a cluster, and as a kubernetes user, you may have access to multiple clusters, therefore let's review the current cluster configuration:
 
 `kubectl config view`{{execute}}
 
-Let's run the command below to list the cluster:
+We can run the command below to get a list of all clusters:
+
 `kubectl config get-clusters`{{execute}}
 
 As you can see, there is currently one cluster named kubernetes and one user kubernetes-admin. In this case, the context is kubernetes-admin@kubernetes.
 
-To list the current context, we can run the below command:
+To see the current context, we can run the below command:
 
 `kubectl config current-context`{{execute}}
 
-Let's  add a new context on the next step.
+Let's move on to the next step and create new context.
 
 

@@ -1,24 +1,30 @@
-- We can watch rolling update status of `nginx-deployment` deployment until completion:
-     `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
+Let's deploy an nginx application in the default namespace using the kubectl command line method:
 
-   - We can also get the rollout history:
-     `kubectl rollout history deployment/nginx-deployment`{{execute}}
+`kubectl create deployment nginx-deployment --image=nginx:1.16`{{execute}}
 
-- Now let's get again all the pods name along with their new nginx image version:
-   `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
+We can verify whether the resources have been created:
 
-    Notice here, the nginx image is nginx:1.17 now
+Let's verify the deployment:
+  
+`kubectl get deploy/nginx-deployment`{{execute}} 
 
--  To undo the update, run:
-   `kubectl rollout undo deployment/nginx-deployment`{{execute}}
+We can also verify whether the Pods have been created:
 
--  Watch the status again:
-   
-   `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
+`kubectl get pods`{{execute}}
 
--  After the rollout is completed, the image version will be back to nginx:1.16
-   
-   `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
+Now let's scale the deployment to 5 replicas:
+  
+`kubectl scale deploy/nginx-deployment --replicas=5`{{execute}}
 
+Verify whether deployment has been scaled: 
+`kubectl get pods`{{execute}} 
 
-- To undo the update with a specific verion, pass the `--to-revision=` flag with the `kubectl rollout undo command` at the end.
+You can pass the `-w` flag to watch  the scaling live.
+
+Let 's scale it back to 1 replica and move on to the next step:
+
+`kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}
+
+Verify whether the application has been scaled down:
+  
+`kubectl get pods`{{execute}}

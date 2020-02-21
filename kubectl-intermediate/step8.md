@@ -1,32 +1,34 @@
- - Pre-requisite: familiarity with json and josnpath is crucial as well as famility with outputing k8s resource into json/yaml `kubectl get resouce -o json/yaml`.
+In the step 4, we installed kubectx as well as kubens.
+To list all the namespaces, type:
 
-- The `-o jsonpath` flag with the kubectl command allows you to filter resources and display them in the way you desire.
-- Let's say you want to find the names of all your k8s nodes along with their CPU resources. In order to do, let's fallow the 4 steps below:
-  
-  - Identify the kubeclt required to provide the info needed, in this case:
+`kubens`{{execute}}
 
-      `kubectl get nodes`{{execute}}`
+Notice again, the current active namespace `default` is highlighted in yellow
 
-  - Output the command in json:
+Now, let's switch  to the frontend namespace by tyuping:
 
-      `kubectl get nodes -o json`{{execute}}
+`kubens frontend`{{execute}}
 
-  - Create or form the jsonpath query. In out case, it would be:
+Let's list the pods:
 
-     `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
-    
-  - Pass the query to the jsonpath option of kubeclt command:
+`kubectl get pods`{{execute}}
 
-     `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
+There is no need to add the `-n` or `--namespace` flag.
 
-As you may notice, the ouptut does not look pretty. What if we add `\n`newline return between the two JSONPath pairs as:
+Let's now switch back to the default namespace:
 
-  `kubectl get nodes -o=jsonpath='{.items[*].metadata.name}{"\n"}{.items[*].status.capacity.cpu}'`{{execute}}
+`kubens default`{{execute}}
 
-The new output looks a little better, however if we want our output to look like this below:
+Clean up the environment by deleting the pods we deployed  in previous step. 
 
-  ```
-    master   2
-    node01   4
-  ```
-  We will then need to use jsonpath  range/loop.
+Type or click below:
+
+`kubectl delete pod nginx -n frontend`{{execute}}
+
+`kubectl delete pod nginx -n  backend`{{execute}}
+
+Verify that the pods no longer exist before moving on to the next step by typing:
+
+`kubectl get pods -n frontend`{{execute}}
+
+`kubectl get pods -n backend`{{execute}}
