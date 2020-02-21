@@ -16,7 +16,7 @@ The second option is to generate the manifest via the kubectl command. Let's cre
 
 *The `--dry-run` flag allows you preview the object without creating it.
 
-Let's erify whether the manifest has been created:
+Let's verify whether the manifest file has been created:
 
 `cat ~/ns-backend.yaml`{{execute}}
 

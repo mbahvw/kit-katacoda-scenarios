@@ -5,7 +5,7 @@ Here is how to use custom-columns with kubectl:
 `kubectl get RESOURCE -o=custom-columns=COLUMN_HEADER:.JSONPATH QUERY`
 
 
-NOw, let's assume we want to  get all nodes within our cluster and nicely format the output with a column header called NAME. To do that, type or click on we below command:
+Now, let's assume we want to  get all nodes within our cluster and nicely format the output with a column header called NAME. To do that, type or click on we below command:
 
 `kubectl get nodes -o=custom-columns=NAME:.metadata.name`{{execute}}
 

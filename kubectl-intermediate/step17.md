@@ -1,4 +1,4 @@
-To delete a resource, you simply run the `kubectl delete RESOURCE_TYPE RESOURCE NAME` command. For example, to delete the single pod resource that we deployed in the previous step, type:
+To delete a resource, you can simply run the `kubectl delete RESOURCE_TYPE RESOURCE NAME` command. For example, to delete the single pod resource that we deployed in the previous step, type:
 
 `kubectl delete pod nginx`{{execute}}
 
@@ -10,7 +10,7 @@ Let's deploy the nginx application, by typing:
 
 `kubectl apply -f ~/nginx-deploy.yaml`{{execute}}
 
-*To deploy a resource or multiples resources from a manifest file or fils, use the `kubeclt apply` command with `-f` flag and add the path to the file, files, or the file directory*.
+*To deploy a resource or multiples resources from a manifest file or files, use the `kubeclt apply` command with `-f` flag and add the path to the file, files, or the file directory*.
 
 Let's check whether the deployment has been created:
 

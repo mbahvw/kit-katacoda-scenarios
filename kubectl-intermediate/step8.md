@@ -19,13 +19,11 @@ Let's now switch back to the default namespace:
 
 `kubens default`{{execute}}
 
-Clean up the environment by deleting the pods we deployed  in previous step. 
-
-Type or click on the command below:
+Let's clean up the environment by deleting the pods we deployed in the previous step. To delete the pod in the `frontend` namespace, type or click on the command below:
 
 `kubectl delete pod nginx -n frontend`{{execute}}
 
-Wait for the prompt as it may take some time.
+Wait for the prompt as it may take some time, and do the same to delete the pod in the `backend` namespace:
 
 `kubectl delete pod redis -n  backend`{{execute}}
 

@@ -2,7 +2,7 @@ You can use the `--selector` flag to filter and find resources based on their la
 
 We just deployed some container pods in the frontend namespace and added different labels to these pods. Please allow a minute or two for the deployment to complete.
 
-Let's first show the pods'labels by typing the command:
+Let's get all the pods with their labels by typing the command below:
 
 `kubectl get pods -n frontend --show-labels`{{execute}}
  
@@ -22,5 +22,5 @@ The `--selector ` flag can also be use to find resources that do **NOT** have a 
 `kubectl get node --selector='!node-role.kubernetes.io/master'`{{execute}}
 
 
-As you can see, ``--selector` could come in very handy when sorting through or filtering thousands of pods with different labels.
+As you can see, ``--selector` could come in very handy when identifying thousand of pods with different labels.
 

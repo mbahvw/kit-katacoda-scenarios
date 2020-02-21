@@ -1,11 +1,11 @@
 
-Now that we have containers deployed in different namespaces, to access these containers,  we have to either add the `--namespace` flog with the `kubeclt get pods` command, or switch to the namespace where the containers live and the above command without the `--namespace` flag.
+Now that we have containers deployed in different namespaces, to access these containers,  we have to either add the `--namespace` flag with the `kubeclt get pods` command, or switch to the namespace where the containers live and type the above command without the `--namespace` flag.
 
-Let's  explore how to switch between namespaces, by switching to the `frontend` namespace:
+Let's  explore how to switch between namespaces by switching to the `frontend` namespace:
 
 `kubectl config set-context --current --namespace=frontend`{{execute}}
 
-We can list the pods in that namespace without the `--namespace` flag:
+We can now list the pods without adding the `--namespace` flag:
 
 `kubectl get pods`{{execute}}
 
