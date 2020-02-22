@@ -26,3 +26,9 @@ Now. let's delete the above deployment using the manifest/resource file:
 Alternatively, use the delete resource type method as explain ealier:
 
 `kubectl delete deployment nginx-deployment`
+
+Finally, let's verify whether the deployment has been deleted: 
+
+`kubectl get pods`{{execute}}
+`kubectl get deployment nginx-deployment`{{execute}}
+
