@@ -30,5 +30,6 @@ Alternatively, use the delete resource type method as explain ealier:
 Finally, let's verify whether the deployment has been deleted: 
 
 `kubectl get pods`{{execute}}
+
 `kubectl get deployment nginx-deployment`{{execute}}
 
