@@ -10,7 +10,7 @@ Let's use another method to deploy a single redis container into the `backend` n
 
 `kubectl run redis  --image=redis -n backend --restart=Never `{{execute}}
 
-*The `--restart=Never` flag tells the `kubectl run` command to create a single pod.*
+*The `--restart=Never` flag tells the `kubectl run` command to create a single pod. This yield the same thing as the --generator=run/v1 above*
 
 Let's verify whether our containers have been created:
 
