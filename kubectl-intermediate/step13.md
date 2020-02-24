@@ -21,7 +21,7 @@ Verify whether pods has been scaled:
 
 You can pass the `-w` flag to watch  the scaling live.
 
-Let's now scale the deployment back to 1 replica:
+Let's now scale the deployment down to 1 replica:
 
 `kubectl scale deploy/nginx-deployment --replicas=1`{{execute}}
 
