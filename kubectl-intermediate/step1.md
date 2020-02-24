@@ -9,7 +9,7 @@ We can run the command below to get a list of all clusters:
 
 As you can see, there is currently one cluster named kubernetes and one user kubernetes-admin. In this case, the context is kubernetes-admin@kubernetes.
 
-To see the current context, we can run the below command:
+To see the current context, type in the terminal or click on the below command:
 
 `kubectl config current-context`{{execute}}
 
