@@ -10,5 +10,5 @@ We can now list the pods without adding the `--namespace` flag:
 `kubectl get pods`{{execute}}
 
 
-So, if you are constantly switching between namespaces and want to avoid using the long kubectl command above, then the `kubens` plugin becomes handy. It is bundled with the `kubectx` command plugin utility when installed using a package management tool such as yum, apt, dnf, brew,etc.
+So, if you are constantly switching between namespaces and want to avoid using the long kubectl command above, then the `kubens` plugin becomes handy. It is bundled with the `kubectx` command plugin utility when installed using a package management tool such as yum, apt, dnf, brew,etc. These 2 plugins can also be installed via  `krew`, which is a tool that is used to install and manage `kubectl plugins`
 
