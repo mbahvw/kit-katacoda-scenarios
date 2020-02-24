@@ -1,12 +1,12 @@
 {
-  "title": "Advance kubeclt usage",
-  "description": "Advance kubectl usage",
+  "title": "Hands on with kubectl - Advanced",
+  "description": "In this scenario, we will take a look at advanced concepts of Kubernetes through using kubectl.We will look at the tooling and concepts that will help you investigate and troubleshoot through a clusters.",
   "difficulty": "Advanced",
   "time": "45 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - kubectl Plugin Setup",
         "text": "step1.md"
       },
       {
