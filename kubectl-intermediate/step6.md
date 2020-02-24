@@ -1,6 +1,6 @@
 Now that we have created 2 new namespaces, we can deploy a container in each of the namespaces.
 
-Let's deploy a single nginx container application in the `frontend` namespace using the `--generator` flag. Type  or click on the below commad:
+Let's deploy a single nginx container application in the `frontend` namespace using the `--generator` flag. Type or click on the below commad:
   
 `kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
 

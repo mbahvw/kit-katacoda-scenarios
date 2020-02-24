@@ -14,7 +14,7 @@ The second option is to generate the manifest file via the kubectl command. Let'
 
 `kubectl create namespace backend -o yaml --dry-run >~/ns-backend.yaml`{{execute}}
 
-*The `--dry-run` flag allows you preview the object without creating it.*
+*The `--dry-run` flag allows you to preview the object without creating it.*
 
 Let's verify whether the manifest file has been created:
 
