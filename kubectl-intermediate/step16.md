@@ -1,4 +1,4 @@
-Patching can be used to partially update any kubernetes resources (nodes,pods,deployments,etc). In this step, we are going to deployan nginx container with a label using the kubectl command, then update the label.
+Patching can be used to partially update any kubernetes resources (nodes,pods,deployments,etc). In this step, we are going to deploy an nginx container with a label using the kubectl command, then update the label.
 
 Let's create a pod with a label: `env=prod` in the default namespace:
 
