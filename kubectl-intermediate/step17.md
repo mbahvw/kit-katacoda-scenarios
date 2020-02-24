@@ -19,7 +19,7 @@ Let's check whether the deployment has been created:
 Let's also verify whether the container pod has been created:
 `kubectl get pods`{{execute}}
 
-Now. let's delete the above deployment using the manifest/resource file:
+Now. we can delete the above deployment using its manifest file:
 
 `kubectl delete -f ~/nginx-deploy.yaml`{{execute}}
 

@@ -24,4 +24,4 @@ After the rollout is completed, the image version will be rolled back to nginx:1
    
 `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
-Finally, to if you want to update your application with a specific version, run the `kubectl rollout history` command to show the different update revision that have been done, pick the revision number you want to update your application to, and run the kubectl command with the `--to-revision=n`flag, where `n=revision number` from the rollout history output. Here is the full command: `kubectl rollout undo --to-revision=n`.
+Finally, if you want to update your application with a specific version, run the `kubectl rollout history` command to show the different update revision that have been done, pick the revision number you want to update your application to and run the kubectl command with the `--to-revision=n`flag, where `n=revision number` from the rollout history output. Here is the full command: `kubectl rollout undo --to-revision=n`.

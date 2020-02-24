@@ -13,7 +13,7 @@ We can verify whether the application has been scaled:
    
 Check the Ready column in the deployment output, it should display 5/5 when the scaling is completed.
 
-Let's get all the pods name along with their current nginx image version using custom-clolumns:
+Let's filter all the pods name along with their current nginx image version using custom-columns:
 
 `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
