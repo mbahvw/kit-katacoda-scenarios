@@ -13,6 +13,6 @@ To see the current context, type in the terminal or click on the below command:
 
 `kubectl config current-context`{{execute}}
 
-Let's move on to the next step and create new context.
+Let's move on to the next step and create a new context.
 
 

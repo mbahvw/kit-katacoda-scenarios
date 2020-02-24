@@ -1,4 +1,4 @@
-If we want to get outputs with nicely formatted column headers, then JSONPath's custom columns is the best way to go.
+If we want to get output with nicely formatted column headers, then JSONPath's custom columns is the best way to go.
 Custom-columns is easier to use than the range operator.
 Here is how to use custom-columns with kubectl:
 

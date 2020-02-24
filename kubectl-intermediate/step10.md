@@ -3,9 +3,9 @@
 The `-o=jsonpath` flag with the kubectl command allows you to filter resources and display them in the way you desire.
 Let's say we want to find the names of all the kubernestes nodes along with their CPU resources. The simple way to achieve this is to fallow the 4 steps below:
   
-  - Identify the kubeclt required to provide the info needed, in this case:
+  - Identify the kubectl required to provide the info needed, in this case:
 
-      `kubectl get nodes`{{execute}}`
+      `kubectl get nodes`{{execute}}
 
   - Output the command in json:
 
@@ -15,7 +15,7 @@ Let's say we want to find the names of all the kubernestes nodes along with thei
 
      `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
     
-  - Pass the query to the jsonpath option of the kubeclt command:
+  - Pass the query to the jsonpath option of the kubectl command:
 
      `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
 

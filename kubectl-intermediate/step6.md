@@ -16,7 +16,7 @@ Let's verify whether our containers have been created:
 
 `kubectl get pods`{{execute}} 
  
-`Oops!!No resources found`. You won't see any resources, because you are currenyly in the default namespace and the new containers are deployed in different namespaces. To retrieve and display the newly created containers, we need to pass the `--namespace NAMESPACE-NAME` flag  or the `-n`  flag short for `--namespace` flag.
+`Oops!! No resources found`. You won't see any resources, because you are currenyly in the default namespace and the new containers are deployed in different namespaces. To retrieve and display the newly created containers, we need to pass the `--namespace NAMESPACE-NAME` flag  or the `-n`  flag short for `--namespace` flag.
 
 Let's get the nginx pod from the frontend namespace by typing the following commmand:
 

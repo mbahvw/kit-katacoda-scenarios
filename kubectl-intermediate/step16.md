@@ -1,4 +1,4 @@
-Patching can be used to partially update any kubernetes resources (nodes,pods,deployments,etc). In this step, we are going to deploy an nginx container with a label using the kubectl command, then update the label.
+Patching can be used to partially update any kubernetes resources (nodes, pods, deployments, etc). In this step, we are going to deploy an nginx container with a label using the kubectl command, then update the label.
 
 Let's create a pod with a label: `env=prod` in the default namespace:
 
@@ -16,4 +16,4 @@ Let's verify with the `--show-labels` flag:
 
 `kubectl get pod nginx --show-labels`{{execute}}
 
-Alternatively, you can use the `kubectl edit pod nginx` command  an d manually edit the .metada.label.env, them save it.
+Alternatively, you can use the `kubectl edit pod nginx` command  and manually edit the .metada.label.env, them save it.

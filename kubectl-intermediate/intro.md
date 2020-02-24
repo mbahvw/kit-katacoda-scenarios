@@ -8,4 +8,4 @@
   - How to update, patch, delete, and scale resouces
 
 
-The environment is configured with a running 2-nodes kubernetes cluster ( 1-master, 1- worker ).
+The environment is configured with a running 2-node kubernetes cluster ( 1-master, 1- worker ).

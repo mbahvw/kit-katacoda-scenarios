@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Kubeclt - Context and Configuration",
+        "title": "Kubectl - Context and Configuration",
         "text": "step1.md"
       },
       {
@@ -57,7 +57,7 @@
         "text": "step10.md"
       },
       {
-        "title": "Use Loop/Range in JSONPath with Kubeclt",
+        "title": "Use Loop/Range in JSONPath with Kubectl",
         "code": "clear.sh",
         "text": "step11.md"
       },
