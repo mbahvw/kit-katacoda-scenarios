@@ -1,6 +1,6 @@
 There are two methods to create a namespace. The first and easier method is to use the kubectl command. This method is also known as the imperative method. The second method is to use a yaml manifest file, which is also known as the declarative method. Let's explore both of these 2 methods.
 
-For the imperative method, let's create a new namespace called `frontend` via the `kubecctl` command. Type or click on the below click to create it:
+For the imperative method, let's create a new namespace called `frontend` via the `kubecctl` command. Type in the terminal or click on the below click to create the namespace:
 
 `kubectl create namespace frontend`{{execute}}
 
