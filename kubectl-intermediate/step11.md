@@ -1,4 +1,4 @@
-In the previous step,  we wanted to get an output that is formated as the one below:
+In the previous step,  we wanted to get an output that is formatted as below:
   
 ```
 master   2
@@ -7,7 +7,7 @@ node01   4
 
 To achieve this, we would use the range jsonpath operator to iterate through each item (nodes in this case) and use some tabulation `\t` as well as a new line `\n` characters  to get the above output.
 
-To do this in JSONPATH, we would use the `range` and `end`  operators as fallow:
+To do this in JSONPath, we would use the `range` and `end`  operators as follows:
 
 ```
 {range  .items[*]}

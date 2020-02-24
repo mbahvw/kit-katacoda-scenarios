@@ -1,4 +1,4 @@
-We have placed a script in the home user directory to install `kubectx`,let's run it: 
+We have placed a script in the home user directory to install `kubectx`, let's run it: 
 
 `ls -la && ./kubectx.sh`{{execute}}
 

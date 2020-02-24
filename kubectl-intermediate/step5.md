@@ -20,7 +20,7 @@ Let's verify whether the manifest file has been created:
 
 `cat ~/ns-backend.yaml`{{execute}}
 
-Next, Use the `kubectl apply -f` command with the file to create the namespace object or resource as follow:
+Next, Use the `kubectl apply -f` command with the file to create the namespace object or resource as follows:
 
 `kubectl apply -f ~/ns-backend.yaml`{{execute}}
 

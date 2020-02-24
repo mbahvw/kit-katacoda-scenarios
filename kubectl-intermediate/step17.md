@@ -10,7 +10,7 @@ Let's deploy the nginx application, by typing:
 
 `kubectl apply -f ~/nginx-deploy.yaml`{{execute}}
 
-*To deploy a resource or multiples resources from a manifest file or files, use the `kubeclt apply` command with `-f` flag and add the path to the file, files, or the file directory*.
+*To deploy a resource or multiples resources from a manifest file or files, use the `kubectl apply` command with `-f` flag and add the path to the file, files, or the file directory*.
 
 Let's check whether the deployment has been created:
 
@@ -19,11 +19,11 @@ Let's check whether the deployment has been created:
 Let's also verify whether the container pod has been created:
 `kubectl get pods`{{execute}}
 
-Now. we can delete the above deployment using its manifest file:
+Now we can delete the above deployment using its manifest file:
 
 `kubectl delete -f ~/nginx-deploy.yaml`{{execute}}
 
-Alternatively, use the delete resource type method as explain ealier:
+Alternatively, use the delete resource type method as explained ealier:
 
 `kubectl delete deployment nginx-deployment`
 

@@ -1,4 +1,4 @@
-In step 4, we installed kubectx as well as kubens. Let's list all the namespaces using the `kubens command. Please type or click on the command:
+In step 4, we installed kubectx as well as kubens. Let's list all the namespaces using the `kubens` command. Please type or click on the command:
 
 `kubens`{{execute}}
 
