@@ -1,7 +1,7 @@
 **Pre-requisite**: Familiarity with json and josnpath is crucial as well as famility with outputing k8s resource into json/yaml `kubectl get resouce -o json/yaml`.
 
 The `-o=jsonpath` flag with the kubectl command allows you to filter resources and display them in the way you desire.
-Let's say you want to find the names of all your kubernestes nodes along with their CPU resources. In order to do, let's fallow the 4 steps below:
+Let's say we want to find the names of all the kubernestes nodes along with their CPU resources. The simple way to achieve this is to fallow the 4 steps below:
   
   - Identify the kubeclt required to provide the info needed, in this case:
 
