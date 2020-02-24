@@ -6,7 +6,7 @@ We can also delete a resource using its yaml manifest file. To illustrate this, 
 
 `kubectl create deployment nginx-deployment --image=nginx --dry-run -o yaml >~/nginx-deploy.yaml`{{execute}}
 
-Let's deploy the nginx application, by typing:
+Let's deploy the nginx application:
 
 `kubectl apply -f ~/nginx-deploy.yaml`{{execute}}
 
