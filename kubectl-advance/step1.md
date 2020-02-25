@@ -8,5 +8,5 @@ In the previous scenario [intermediate kubectl](site), we introduced you to a fe
 For the full list of plugins, please see them here (link to https://github.com/kubernetes-sigs/krew-index/blob/master/plugins.md )
 
 Let's install Krew. Navigate to ~/krew-install directory and install it:
-`cd ~/krew-install && .install-krew.sh`{{execute}}
+`cd ~/krew-install && ./install-krew.sh`{{execute}}
 
