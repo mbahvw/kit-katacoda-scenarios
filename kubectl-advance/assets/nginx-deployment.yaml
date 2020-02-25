@@ -23,5 +23,5 @@ spec:
         - containerPort: 80
       tolerations:
       - key: "node-role.kubernetes.io/master"
-        operator: Exist
+        operator: Exists
         effect: NoSchedule
