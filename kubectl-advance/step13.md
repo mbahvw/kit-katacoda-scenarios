@@ -17,8 +17,11 @@ Let's verify also that some of the pods are created in the control node:
 
 You can also use the pod-dive plugin to  shows one of  pod's workload tree and its info inside a node (pod-dive is already installed). Let's show how that works:
 - Let's get the first pod and assign it to a variable:
+
   `POD=$(kubectl get pods -o=jsonpath='{.items[0].metadata.name}')`{{execute}}
+
 - Now, let's run the pod-dive plugin:
+
   `kubectl pod-dive $POD`{{execute}}
 
 As you may notice, some of the pods are deployed in the control/master node;
