@@ -2,5 +2,5 @@
 
 echo -en "Installing pod-dive plugin \n"
 
-kubeclt krew install pod-dive
+kubectl krew install pod-dive
 
