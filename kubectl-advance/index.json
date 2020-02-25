@@ -71,6 +71,15 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "install-krew.sh",
+          "target": "~/krew-install",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
