@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: nginx-deployment
   labels:
     app: web
     tier: frontend
   namespace: default
 spec:
-  replicas: 3
+  replicas: 43
   selector:
     matchLabels:
       app: web
