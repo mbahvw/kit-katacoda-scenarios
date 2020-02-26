@@ -5,16 +5,16 @@
 
 let's discover some plugins:
 
-`kubectl krew seach`{{execute}}
+`kubectl krew search`{{execute}}
 
 clear the screen script
 
-As you can see, there are over 80 plugins available. The usage of these plugins is  personal and you may not use them all plugins. Learn, install and use these plugin you see fit or necessary depending on your situation.
+As you can see, there are over 80 plugins available. The usage of these plugins is  personal and you may never  use them all. You can learn, install and use these plugins as you see fit or necessary depending on your situation.
 
 Here are some plugins that are usually veryt handy as an administrator:
 
 - `ctx (switch between context)`
-- `cn (switch between namespace)`
+- `ns (switch between namespace)`
 - `access-matrix ( show an RBAC access matrix for server resources)`
 - `iexec (Interactive selection tool for kubectl exec)`
 - `images (Show container images used in the cluster)` 
@@ -24,4 +24,4 @@ Here are some plugins that are usually veryt handy as an administrator:
 -  `ca-cert ( to Print the PEM CA cert of the current cluster)`
 
 
-As you can see in that, there are many plugin that could make your life as administrator simpler and easier. 
+As you can see in that, there are many plugins that could make your life as administrator simpler and easier. So, explore them 
