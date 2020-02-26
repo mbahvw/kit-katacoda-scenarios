@@ -1,4 +1,4 @@
-Install some plugins
+Let's go ahead and install some of these plugins:
 
 ```
 cat > ~/plugins <<EOF
@@ -12,6 +12,7 @@ whoami
 who-can
 tail
 ca-cert
+pod-dive
 EOF
 ```{{execute}}
 
