@@ -1,8 +1,6 @@
 Install some plugins
 
-cat plugins
-```
-master $ cat plugins
+cat > plugins <<EOF
 ctx
 ns
 access-matrix
@@ -13,7 +11,7 @@ whoami
 who-can
 tail
 ca-cert
-```
+EOF
 
 run to install:
 `for plugin in $(cat plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}
