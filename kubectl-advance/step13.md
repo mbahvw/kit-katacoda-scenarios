@@ -17,14 +17,21 @@ Let's verify also that some of the pods are created in the control node:
 
 As you may notice, some of the pods are deployed in the control/master node.
 
-You can also use the pod-dive plugin to shows the pod's  workload tree and its info inside a node (pod-dive is already installed). Let's show how that works:
-- Let's get the some of the pod and assign them to a variable:
+You can also use the pod-dive plugin to shows the pod's  workload tree and its info inside a node. Let's show how that works:
+
+- Let's install the `pod-dive` plugin:
+  
+  `kubectl krew install pod-dive`{{execute}}
+
+- Let's try to get the pods that are deployed in the master node and assign them to a variable:
 
   `POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')`{{execute}}
 
 - Now, let's run the pod-dive plugin:
 
-  `kubectl pod-dive $POD`{{execute}}
+  `kubectl pod-dive $POD_MASTER`{{execute}}
+
+  *The output shows a nice summary of tre pod's workload tree*
 
 Before we drain the node, we need first to cordon it, which means we need to ensure that no pod can be scheduled into the node. Let's go ahead and cordon `node01`:
 
