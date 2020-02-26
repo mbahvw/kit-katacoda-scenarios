@@ -45,3 +45,5 @@ Check to verify whether the pods and deployment have been deleted:
 `kubectl get pods`{{execute}}
 
 `kubectl get deployment/nginx-deployment`{{execute}}
+
+Alternatively, you can install the `node-restart` plugin and use that to automatically cordon, drain, and uncordon the node. 
