@@ -1,5 +1,6 @@
 Install some plugins
 
+```
 cat > plugins <<EOF
 ctx
 ns
@@ -12,6 +13,7 @@ who-can
 tail
 ca-cert
 EOF
+```{{execute}}
 
 run to install:
 `for plugin in $(cat plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}
