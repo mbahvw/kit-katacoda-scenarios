@@ -1,7 +1,7 @@
 Install some plugins
 
 ```
-cat > plugins <<EOF
+cat > ~/plugins <<EOF
 ctx
 ns
 access-matrix
@@ -16,11 +16,12 @@ EOF
 ```{{execute}}
 
 run to install:
-`for plugin in $(cat plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}
+`for plugin in $(cat ~/plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}
 
-Verify what `krew` installed plugins:
+Verify and list the installed plugins:
 
-`kubectl plugin list`{{execute}}
+`kubectl krew list`{{execute}}
 
 You can also list the list by:
+
 `kubectl plugin list`{{execute}}

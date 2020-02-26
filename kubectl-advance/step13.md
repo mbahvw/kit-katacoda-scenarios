@@ -45,6 +45,3 @@ If you list the nodes now, you will find the status of  `node01`  set to `Ready,
 
 Please click on the Continue to move to Draining node -Part II
 
-1. cat the deploymeny config file, and to 
-2. create a deployment with 4 replicas  and add toleration.. got the script working.
-3.  show that the 
