@@ -1,17 +1,18 @@
-# Interacting with node - Part I
+# Interacting with Node - Part I
 
-In this scenatrio, we will create a deployment configuration by adding some toleration to the pods so that they can be created or migrated into the control/master node.
-The reason is that we only have 2 nodes( a control a.k.a master node, and a worker node).  By default, the control node is tainted with `node-role.kubernetes.io/master`,  therefore, any pod that does not have a teloration matching the node taint cannot be deployed into the control node.
+In this section, we will create a Deployment configuration by adding some toleration to the Pods so that they can be created or migrated into the control/master Node.
 
-Let's now take a look at the deployment manifest file and check the  added tolerations:
+The reason is that we only have 2 Nodes (a control a.k.a master node, and a worker node).  By default, the control node is tainted with `node-role.kubernetes.io/master`,  therefore, any Pod that does not have a toleration matching the node taint cannot be deployed into the control node.
+
+Let's now take a look at the Deployment manifest file and check the added tolerations:
 
 `cd ~/deployment && cat nginx-deployment.yaml | grep  -A5 tolerations`{{execute}}
 
-We can now Deploy the manifest using either teh apply or create command:
+We can now deploy the manifest using either the apply or create command:
 
 `kubectl create -f nginx-deployment.yaml`{{execute}}
 
-Verify that the pods have been created:
+Verify that the Pods have been created:
 
 `kubectl get pods`{{execute}}
 
@@ -20,7 +21,7 @@ Let's verify also that some of the pods are created in the control node:
 
 As you may notice, some of the pods are deployed in the control/master node.
 
-You can also use the pod-dive plugin to shows the pod's  workload tree and its info inside a node. Let's show how that works:
+You can also use the `pod-dive` plugin to shows the Pod's workload tree and its info inside a Node. Let's show how that works:
 
 - Let's install the `pod-dive` plugin:
   
@@ -30,7 +31,7 @@ You can also use the pod-dive plugin to shows the pod's  workload tree and its i
 
   `POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')`{{execute}}
 
-- Now, let's run the pod-dive plugin:
+- Now, let's run the `pod-dive` plugin:
 
   `kubectl pod-dive $POD_MASTER`{{execute}}
 
@@ -43,7 +44,7 @@ Before we drain the node, we need first to cordon it, which means we need to ens
 If you list the nodes now, you will find the status of  `node01`  set to `Ready,SchedulingDisabled`:
 `kubectl get nodes`{{execute}}
 
-Please click on the Continue to move to Draining node -Part II
+Please click on the Continue to move to Draining node-Part II
 
 1. cat the deploymeny config file, and to 
 2. create a deployment with 4 replicas  and add toleration.. got the script working.

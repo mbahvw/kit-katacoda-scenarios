@@ -5,7 +5,7 @@ In the previous scenario [intermediate kubectl](site), we introduced you to a fe
 - CTX - switch between contexts
 - tail - stream logs from multiple pods and containers
 
-For the full list of plugins, please see them here ( https://github.com/kubernetes-sigs/krew-index/blob/master/plugins.md )
+For the full list of plugins, please see them here (https://github.com/kubernetes-sigs/krew-index/blob/master/plugins.md)
 
 Let's install Krew. Navigate to the ~/krew-install directory and install it:
 `cd ~/krew-install && ./install-krew.sh`{{execute}}
