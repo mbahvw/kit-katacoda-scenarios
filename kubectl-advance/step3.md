@@ -16,13 +16,14 @@ pod-dive
 EOF
 ```{{execute}}
 
-run to install:
+Click on or type the following command to install:
+
 `for plugin in $(cat ~/plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}
 
 Verify and list the installed plugins:
 
 `kubectl krew list`{{execute}}
 
-You can also list the list by:
+You can also list the installed plugins by:
 
 `kubectl plugin list`{{execute}}
