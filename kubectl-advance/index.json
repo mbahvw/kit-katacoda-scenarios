@@ -23,6 +23,7 @@
       {
         "title": "Step 4",
         "code": "clear.sh",
+        "courseData": "create-ns-deploy.sh",
         "text": "step4.md"
       },
       {
@@ -94,8 +95,11 @@
           "chmod": "+x"
         },
         {
-
           "file": "nginx-deployment.yaml",
+          "target": "~/deployment"
+        },
+        {
+          "file": "explore-deploy.yaml",
           "target": "~/deployment"
         }
       ]

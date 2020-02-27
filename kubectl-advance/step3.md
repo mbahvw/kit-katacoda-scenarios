@@ -13,6 +13,7 @@ who-can
 tail
 ca-cert
 pod-dive
+get-all
 EOF
 ```{{execute}}
 
