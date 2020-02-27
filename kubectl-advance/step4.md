@@ -1,4 +1,4 @@
-Using  exec to interact with pods
+
 
 let's quickly explore some of these plugins
 We can begin by listing who the current user is:
@@ -16,7 +16,7 @@ We just created additional namespaces and contaienr pods, let's list the namespa
 
 `kubectl ns`{{execute}}
 
-Let's switch to one of the namespace and run the `pod-dive` plugin command on one of the pods:
+Let's switch to one of the namespace and run the `pod-dive` plugin command to get one of the pods:
 `kubectl ns developers`{{execute}}
 
 Get the name of the first pod and run the pod-dive plugin on it:
@@ -41,6 +41,6 @@ Finally, let's revisit the context's plugin:
 
 `kubectl ctx`{{execute}}
 
-In the intermediate scenario we used  the `kubectx` plugin, which is just an alias to `kubectl ctx` command.
+In the intermediate scenario, we used  the `kubectx` plugin, which is just an alias to `kubectl ctx` command.
 
 The non-plugin alternative is to use `kubeclt get contexts` to get the user who is mapped to the context.

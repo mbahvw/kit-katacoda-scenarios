@@ -2,10 +2,27 @@ Using logs/tail to interact and debug pods issue.
 
 continuation step 4.. break step 4 into 2 steps
 
-- kubectl ns kube-system
-  - kubectl get pods and kubectl pod-logs ( weave pods logs using both methods)
-    -  kubectl pod-dive kubectl pod-dive weave-net-74w99
-    -  kubectl pod-logs
-        - select the pods  11) for pod, 2) container weave-npc
-        -  check out the output
-    -  `kubectl logs  weave-net-74w99  -c weave-npc` I really prefer this method because you export the logs
+To dump pod logs into the standard output, use the `kubectl logs POD_NAME`
+
+Let's switch to teh kube-system namespace and access some logs:
+
+`kubectl ns kube-system`{{execute}}
+
+Let's output the pods:
+`kubectl get pods`{[execute]} 
+
+Use the `pod-logs` plugin to get the weave pods logs:
+`kubectl pod-logs`{{execute}} 
+
+Then, select from the list:
+- The weave-net-xxxx pod: 11
+- Then the weave-npc container: 2 
+- Check out the logs standard output
+
+Alternatively, we can use the regular `kubectl logs POD_NAME -c CONTAINER` command:
+
+`kubectl logs  weave-net-74w99  -c weave-npc`{{execute}}
+
+*Note: the `pod-logs`  does allow output redirection, therefore if you want to redirect the output use `kubectl logs`
+
+`kubectl logs  weave-net-74w99  -c weave-npc >~/weave.logs`{{execute}}
