@@ -1,3 +1,3 @@
 Using logs/tail to interact and debug pods issue. 
 
-continuation of logs with tail
+continuation step 4.. break step 4 into 2 steps

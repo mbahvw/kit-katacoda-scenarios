@@ -1,3 +1,1 @@
-create 2 deployments and watch them
-
-_ look= at logs
+show metrics for pods and nodes with the command `kubectl top node` and `kubectl top pod`
