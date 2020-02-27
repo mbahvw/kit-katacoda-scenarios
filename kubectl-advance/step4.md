@@ -23,8 +23,15 @@ Let's switch to one of the namespace and run the `pod-dive` plugin command on on
 
 `kubectl pod-dive $POD`{{execute}}`
 
-LEt's also explore the `access-matrix`, which becomes handy when looking for RBAC Access 
+We can display all the images in all namespaces:
+
+`kubectl images -A`{{execute}}
+
+
+
+Let's also explore the `access-matrix`, which becomes handy when looking for RBAC Access 
 `kubectl access-matrix`{{execute}}
+
 
 
 Finally, let's explore the plugin context:
