@@ -2,7 +2,13 @@
  
  The `kubectl top` allows you to see the resource consumption for nodes or pods, and it needs a metrics server installed in order to output the metrics pods and nodes metrics collected from the metric server.
 
-We have already installed the metric server in the back, therefore, let's verify that we are getting a response from the metric server API:
+
+let's deploy the metric server:
+`kubectl create -f ~/deploy/kubernetes/`{{execute}}
+
+
+
+Let's verify that we are getting a response from the metric server API:
 
 `kubectl  get --raw /apis/metrics.k8s.io/`{{execute}}
 
@@ -10,6 +16,9 @@ If you get a response similar to the one below it means the metrics is up and ru
 ```
 {"kind":"APIGroup","apiVersion":"v1","name":"metrics.k8s.io","versions":[{"groupVersion":"metrics.k8s.io/v1beta1","version":"v1beta1"}],"preferredVersion":{"groupVersion":"metrics.k8s.io/v1beta1","version":"v1beta1"}}
 ```
+
+We need to give the metrics server few minutes in order to collect data.
+
 Now, let's try to get the memory abd CPU utilization of pods in all namespaces:
 
 `kubectl top pods --all-namespaces`{[execute]}

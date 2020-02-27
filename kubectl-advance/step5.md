@@ -1,6 +1,5 @@
-Using logs/tail to interact and debug pods issue. 
+# Using logs/tail to interact and debug pods issue. 
 
-continuation step 4.. break step 4 into 2 steps
 
 To dump pod logs into the standard output, use the `kubectl logs POD_NAME`
 
@@ -15,14 +14,14 @@ Use the `pod-logs` plugin to get the weave pods logs:
 `kubectl pod-logs`{{execute}} 
 
 Then, select from the list:
-- The weave-net-xxxx pod: 11
+- The weave-net-xxxx pod: 19
 - Then the weave-npc container: 2 
 - Check out the logs standard output
 
 Alternatively, we can use the regular `kubectl logs POD_NAME -c CONTAINER` command:
 
-`kubectl logs  weave-net-74w99  -c weave-npc`{{execute}}
+`kubectl logs  weave-net  -c weave-npc`
 
 *Note: the `pod-logs`  does allow output redirection, therefore if you want to redirect the output use `kubectl logs`
 
-`kubectl logs  weave-net-74w99  -c weave-npc >~/weave.logs`{{execute}}
+`kubectl logs  weave-net-POD  -c weave-npc >~/weave.logs`
