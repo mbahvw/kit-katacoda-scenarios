@@ -21,7 +21,7 @@ To login and interact with the container's shell, do the following:
 
 
 From the shell prompt, type:
-`echo -en "Welcome to my world!!">/tmp/welcome.txt; cat welcome.txt"`{{execute}}
+`echo  "Welcome to my world!!">/tmp/welcome.txt; cat welcome.txt"`{{copy}}
 
 Type `exit` to exit the shell.
 

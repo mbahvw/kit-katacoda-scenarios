@@ -23,3 +23,9 @@ Now, let's copy from the test container to  the local /tmp directory:
 `kubectl cp test:/tmp/welcome.txt  /tmp`{{execute}}
 
 List the /tmp directory and verify whether the file has been copied.
+
+# Clean up:
+
+Let's delete the pod:
+
+`kubectl delete pod test`{{execute}}

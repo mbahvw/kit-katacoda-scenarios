@@ -1,6 +1,5 @@
 # Interacting  with node - cordon
 
-
 Let's now try to get the pods that are deployed in the master node and assign them to a variable:
 
 `POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')`{{execute}}
@@ -18,4 +17,4 @@ Before we drain the node, we need first to cordon it, which means we need to ens
 If you list the nodes now, you will find the status of  `node01`  set to `Ready,SchedulingDisabled`:
 `kubectl get nodes`{{execute}}
 
-Please click on the Continue to move to Draining node -Part III
+Please click on the Continue to move to Draining node 
