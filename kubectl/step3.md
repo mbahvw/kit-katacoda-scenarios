@@ -2,4 +2,4 @@ Let’s check the status of the Nodes. Wait for the Nodes to be in the `Ready` c
 
 `kubectl get nodes`{{execute}}
 
-**Pro Tip**: `kubectl get no` is a shorten version of the command above.
+**Pro Tip**: `kubectl get no`{{execute}} is a shortened version of the command above.
