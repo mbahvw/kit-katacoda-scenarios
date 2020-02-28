@@ -28,6 +28,7 @@
       },
       {
         "title": "Step 5",
+        "courseData": "delete-deploy.sh",
         "code": "clear.sh",
         "text": "step5.md"
       },
@@ -43,6 +44,7 @@
       },
       {
         "title": "Step 8",
+        "courseData": "default-ns.sh",
         "code": "clear.sh",
         "text": "step8.md"
       },
@@ -65,21 +67,6 @@
         "title": "Step 12",
         "code": "clear.sh",
         "text": "step12.md"
-      },
-      {
-        "title": "Step 13",
-        "courseData": "default-ns.sh",
-        "code": "clear.sh",
-        "text": "step13.md"
-      },
-      {
-        "title": "Step 14",
-        "code": "clear.sh",
-        "text": "step14.md"
-      },
-      {
-        "title": "Step 15",
-        "text": "step15.md"
       }
     ],
     "intro": {

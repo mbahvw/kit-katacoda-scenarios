@@ -1,7 +1,6 @@
 
 
-let's quickly explore some of these plugins
-We can begin by listing who the current user is:
+let's quickly explore some of these plugins. We can begin by listing who the current user is:
 
 `kubectl whoami`{{execute}}
 
@@ -19,15 +18,19 @@ We just created additional namespaces and contaienr pods, let's list the namespa
 Let's switch to one of the namespace and run the `pod-dive` plugin command to get one of the pods:
 `kubectl ns developers`{{execute}}
 
-Get the name of the first pod and run the pod-dive plugin on it:
+We can first list all the pods in that namespace:
+
+`kubectl get pods`{{execute}}
+
+NOw. let's get the name of the first pod, assign it to variableand run the `pod-dive` plugin:
 
 `POD=$(kubectl get pods -o=jsonpath='{ .items[0].metadata.name}')`{{execute}}
 
 `kubectl pod-dive $POD`{{execute}}`
 
-The above output gives shows a nice pod's workload tree.
+The above output gives shows a nice pod's workload tree (node,namesapce, type of resource, etc,).
 
-We can display all the images in all namespaces:
+We can also display all the images in all namespaces:
 
 `kubectl images -A`{{execute}}
 

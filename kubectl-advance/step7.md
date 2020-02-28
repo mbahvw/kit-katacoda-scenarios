@@ -1,24 +1,25 @@
-# Interacting with pods - exec or iexec
+# intercting with POD - the cp command
 
-### Using  exec to interact with pods
+You can use the `cp` command to copy files and directories to and from containers.
+Using the test container ( deployed in the default namespace) we created in the previous step, let's copy the content of  krew-install directory to the test container's `tmp` directory:
 
-Let' deploy a quick busybox container and execute 
-`kubectl run busybox --image=buysbox --generator=run-pod/v1 --command -- sleep 2700`{{execute}}
+`kubectl cp ~/krew-install  test:/tmp`{{execute}}
 
-We can get the output of the date from the running busybox container without login into the container by:
-`kubectl exec pod/busyboxcmd date`{{execute}}
- 
- or use the `iexec` plugin:
- `kubectl iexec busybox cat /etc/resolv.conf`{{execute}}
+*Note: if the pod has mutiple containers, then  you need to add `-c specific-container` flag. Also, if the pod live in different namespace, add the namespace name before the pod, as shown here `kubectl cp namespace/pod-name:/dir`.*
 
-To login and interact with the container, do the following:
-`kubectl iexec busybox /bin/sh`{{execute}}  
+Let's verify whether the directory has been copied:
 
-From the shell prompt, type:
-`echo -en "Hello busybox">busybox.txt; cat busybox.txt"'{{execute}}
+Exec into the container:
 
-Type `exit` to exit the container shell.
+`kubectl iexec test`{{execute}}
 
-or use the `kubectl exec -it busybox /bin/sh`
+Cd into the /tmp directory and verify whether the directory has been copied.
+
+Type `exit` to exit the shell.
 
 
+Now, let's copy from the test container to  the local /tmp directory:
+
+`kubectl cp test:/tmp/welcome.txt  /tmp`{{execute}}
+
+List the /tmp directory and verify whether the file has been copied.

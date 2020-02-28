@@ -7,7 +7,7 @@ let's discover some plugins:
 
 `kubectl krew search`{{execute}}
 
-clear the screen script
+
 
 As you can see, there are over 80 plugins available. The usage of these plugins is  personal and you may never  use them all. You can learn, install and use these plugins as you see fit or necessary depending on your situation.
 
