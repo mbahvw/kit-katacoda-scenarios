@@ -13,7 +13,7 @@ Exec into the container:
 
 `kubectl iexec test`{{execute}}
 
-Cd into the /tmp directory and verify whether the directory has been copied.
+List the content  of the /tmp directory to verify whether the directory has been copied `ls /tmp`.
 
 Type `exit` to exit the shell.
 
@@ -26,6 +26,6 @@ List the /tmp directory and verify whether the file has been copied.
 
 # Clean up:
 
-Let's delete the pod:
+Please delete the pod before moving on to the next step:
 
 `kubectl delete pod test`{{execute}}
