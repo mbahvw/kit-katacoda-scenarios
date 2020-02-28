@@ -4,9 +4,7 @@
 
 
 let's deploy the metric server:
-`kubectl create -f ~/deploy/kubernetes/`{{execute}}
-
-
+`kubectl create -f ~/metrics/deploy/kubernetes/`{{execute}}
 
 Let's verify that we are getting a response from the metric server API:
 
