@@ -1,0 +1,95 @@
+{
+  "title": "Hands on with kubectl - Introduction",
+  "description": "In this scenario, will introduce you to the basic kubectl commands. You'll learn how to navigate through your cluster quickly and efficiently.",
+  "difficulty": "Beginner",
+  "time": "15 - 20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Cluster Info",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - kubectl Setup",
+        "code": "clear.sh",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 ",
+        "code": "clear.sh",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "code": "clear.sh",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7",
+        "code": "clear.sh",
+        "text": "step7.md"
+      },
+      {
+        "title": "Step 8",
+        "text": "step8.md"
+      },
+      {
+        "title": "Step 9",
+        "code": "clear.sh",
+        "text": "step9.md"
+      },
+      {
+        "title": "Step 10",
+        "code": "clear.sh",
+        "text": "step10.md"
+      },
+      {
+        "title": "Step 11 - Output Formats",
+        "text": "step11.md"
+      },
+      {
+        "title": "Step 12",
+        "code": "clear.sh",
+        "text": "step12.md"
+      },
+      {
+        "title": "Step 13",
+        "code": "clear.sh",
+        "text": "step13.md"
+      },
+      {
+        "title": "Additional Resources",
+        "code": "clear.sh",
+        "text": "step14.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "nginx-deployment.yaml",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
