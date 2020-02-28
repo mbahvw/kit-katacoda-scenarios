@@ -38,12 +38,3 @@ If Terminal 2 is still open, you will notice, some of the pods are now in `node0
 You can also  below command in Terminal 1 to verify that some of the new pods are in `node01`:
 `kubectl get pods -o wide`{{execute}}
 
-When verification, please go ahead and delete the deployment:
-`kubectl delete deployment/nginx-deployment`{{execute}}
-
-Check to verify whether the pods and deployment have been deleted:
-`kubectl get pods`{{execute}}
-
-`kubectl get deployment/nginx-deployment`{{execute}}
-
-Alternatively, you can install the `node-restart` plugin and use that to automatically cordon, drain, and uncordon the node. 
