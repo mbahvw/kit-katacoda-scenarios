@@ -23,7 +23,7 @@ To login and interact with the container's shell, do the following:
 From the shell prompt, type or paste into the shell:
 `echo  "Welcome to kubernetes!!">/tmp/welcome.txt`{{copy}}
 
-`cat /tmp/welcome.txt"`{{copy}}
+`cat /tmp/welcome.txt`{{copy}}
 
 Type `exit` to exit the shell.
 
