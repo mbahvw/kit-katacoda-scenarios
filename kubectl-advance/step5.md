@@ -14,7 +14,7 @@ Use the `pod-logs` plugin to get the weave pods logs:
 `kubectl pod-logs`{{execute}} 
 
 Then, select from the list:
-- The weave-net-xxxx pod: 
+- The weave-net-xxxx pod: 11
 - Then the weave-npc container: 2 
 - Check out the logs standard output
 
@@ -25,3 +25,6 @@ Alternatively, we can use the regular `kubectl logs POD_NAME -c CONTAINER` comma
 *Note: the `pod-logs`  does allow output redirection, therefore if you want to redirect the output use `kubectl logs`
 
 `kubectl logs  weave-net-POD  -c weave-npc >~/weave.logs`
+
+Switch back to the default namespace before moving on to the next step:
+`kubectl ns default`{{execute}}
