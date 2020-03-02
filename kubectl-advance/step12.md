@@ -1,3 +1,1 @@
-# Additional resource - Will be added soon.
-
-
+# Additional resources will be added soon.
