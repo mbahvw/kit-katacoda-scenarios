@@ -1,9 +1,9 @@
-**Pre-requisite**: Familiarity with json and josnpath is crucial as well as famility with outputing k8s resource into json/yaml `kubectl get resouce -o json/yaml`.
+**Pre-requisite**: Familiarity with json and jsonpath is crucial as well as famility with outputing kubernetes resources into json/yaml `kubectl get RESOURCE -o json|yaml`.
 
 The `-o=jsonpath` flag with the kubectl command allows you to filter resources and display them in the way you desire.
-Let's say we want to find the names of all the kubernestes nodes along with their CPU resources. The simple way to achieve this is to fallow the 4 steps below:
-  
-  - Identify the kubectl required to provide the info needed, in this case:
+Let's say we want to find the names of all the kubernetes nodes along with their CPU resources. The simple way to achieve this is to follow the 4 steps below:
+
+  - Identify the `kubectl` command required to provide the information required. In this case:
 
       `kubectl get nodes`{{execute}}
 
@@ -13,21 +13,21 @@ Let's say we want to find the names of all the kubernestes nodes along with thei
 
   - Create or form the jsonpath query. In our case, it would be:
 
-     `'{.items[*].metadata.name}{.item[*].status.capacity.cpu}'`
-    
-  - Pass the query to the jsonpath option of the kubectl command:
+     `'{.items[*].metadata.name}{.items[*].status.capacity.cpu}'`
+
+  - Pass the query to the jsonpath option of the `kubectl` command:
 
      `kubectl get nodes -o=jsonpath='{.items[*].metadata.name} {.items[*].status.capacity.cpu}'`{{execute}}
 
-As you may notice, the ouptut does not look pretty. What if we add `\n` newline character between the two JSONPath pairs as:
+As you may notice, the output does not look pretty. What if we add a `\n` (newline character) between the two JSONPath pairs as:
 
   `kubectl get nodes -o=jsonpath='{.items[*].metadata.name}{"\n"}{.items[*].status.capacity.cpu}{"\n"}'`{{execute}}
 
-The new output looks a little better, however if we want our output to look like the below output:
+The new output looks a little better, however if we want our output to look similar to this:
 
 ```
-master   2
+master   4
 node01   4
 ```
 
-We will then need to use jsonpath range/loop. Let's see how range works in the next step.
+We will then need to use JSONPath ranges/loops. Let's see how ranges work in the next step.

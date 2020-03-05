@@ -8,15 +8,15 @@ To switch to the `dev-context` context, type the below command:
 
 `kubectl config use-context dev-context`{{execute}}
 
-If we display the contexts now, the new active context will be set to  `dev-context` context. Type or click the below command to show the context:
+If we display the contexts now, the new active context will be set to the `dev-context` context. Type or click the below command to show the context:
 
 `kubectl config get-contexts`{{execute}}
 
 
-Let's switch back to the kubenetes-admin@kubernetes context:
+Let's switch back to the `kubernetes-admin@kubernetes` context:
 
 `kubectl config use-context kubernetes-admin@kubernetes`{{execute}}
 
-As you can see, switching back and forth between contexts with the above kubectl command can be very tedious specially when dealing with multiples contexts.
+As you can see, switching back and forth between contexts with the above `kubectl` command can be very tedious especially when dealing with multiple contexts.
 
-The alternative would be to install kubectx. Let's do that in the next step
+The alternative would be to install `kubectx`. Let's do that in the next step.
