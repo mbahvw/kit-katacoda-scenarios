@@ -12,7 +12,7 @@ Now, let's assume we want to  get all nodes within our cluster and nicely format
 
 You can add additional columns to the above command by adding JSONPath pairs (COLUMN HEADER:.metadata) separated by a comma.
 
-In the below command example, we are adding a CPU column header. Type the below:
+In the below command example, we are adding a CPU column header. Type the below command:
 
 `kubectl get nodes -o=custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu`{{execute}}
 

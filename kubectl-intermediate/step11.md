@@ -1,4 +1,4 @@
-In the previous step,  we wanted to get an output that is formatted as such:
+In the previous step,  we wanted to get an output that is formatted as the output shown below:
 
 ```
 master   2

@@ -28,7 +28,7 @@ Verify whether the label has been updated:
 
 To delete the label, append the `-` to `env` , which is the value of the label's key.  Type the command:
 
-`kubectl lebel pod nginx env-`{{execute}}
+`kubectl label pod nginx env-`{{execute}}
 
 Verify whether the label has been deleted:
 
