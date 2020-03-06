@@ -1,4 +1,4 @@
-We can watch the status of the `nginx-deployment` deployment's `rollingUpdate` changes until completion:
+We can watch the status of the `nginx-deployment` deployment's `rollingUpdate` changes until completion. Type the below command:
 
 `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 
@@ -12,11 +12,11 @@ Now let's check our pods to ensure the `nginx` image version has been properly u
 
 Notice here, the `nginx` pod's images are now set to `nginx:1.17`.
 
-To undo the update, type or click on the below command:
+To undo the update, type the below command:
 
 `kubectl rollout undo deployment/nginx-deployment`{{execute}}
 
-Type or click on the below command to watch the status again:
+Type the below command to watch the status again:
 
 `kubectl rollout status -w deployment/nginx-deployment`{{execute}}
 
@@ -26,5 +26,6 @@ After the rollout has completed, the image version will be rolled back to `nginx
 
 Finally, if you want to update your application with a prior rollout revision, run the `kubectl rollout history` command to show the different configuration revisions. Pick the previous revision number you want to change your application to and run the `kubectl` command with the `--to-revision=n`flag, where `n=revision number` from the rollout history output. Here is the full command: `kubectl rollout undo --to-revision=n`.
 
-Let's change the image version back to `nginx:1.17` once more using this method:
+Let's change the image version back to `nginx:1.17` once more using this method. Type the below command:
+
 `kubectl rollout undo deployment/nginx-deployment --to-revision=2`{{execute}}

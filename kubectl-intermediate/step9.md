@@ -17,7 +17,7 @@ Let's get all the pods that are labeled with `app=haproxy`:
 `kubectl get pods -n frontend -l app=haproxy`{{execute}}
 
 
-The `--selector` flag can also be used to find resources that do **NOT** have a certain label. To illustrate this, let's find nodes within our cluster that do **NOT** have the taint label: `node-role.kubernetes.io/master`. Type or click on the command below:
+The `--selector` flag can also be used to find resources that do **NOT** have a certain label. To illustrate this, let's find nodes within our cluster that do **NOT** have the taint label: `node-role.kubernetes.io/master`. Type the below command:
 
 `kubectl get nodes --selector='!node-role.kubernetes.io/master'`{{execute}}
 

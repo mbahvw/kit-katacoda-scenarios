@@ -1,11 +1,11 @@
 Now that we have containers deployed in different namespaces, in order to view and manipulate these resources, there are a couple of options.
 
-1. We have to either add the `--namespace` flag with every `kubectl` command, or
+1. Add the `--namespace` flag with every `kubectl` command
 2. Switch to the appropriate namespace context where the resources live.
 
-Option 2 allows us to avoid providing the `--namespace` flag with every `kubectl` command when working with resources outside of the `default` namespace.
+The option 2 above allows us to avoid providing the `--namespace` flag with every `kubectl` command when working with resources outside of the `default` namespace.
 
-Let's explore how to switch between namespaces by switching our current context to the `frontend` namespace. Type or click on the command:
+Let's explore how to switch between namespaces by switching our current context to the `frontend` namespace. Type the command:
 
 `kubectl config set-context --current --namespace=frontend`{{execute}}
 

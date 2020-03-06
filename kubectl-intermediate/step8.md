@@ -1,4 +1,4 @@
-In step 4, we installed `kubectx` as well as `kubens`. Let's list all the namespaces using the `kubens` command. Please type or click on the command:
+In step 4, we installed `kubectx` as well as `kubens`. Let's list all the namespaces using the `kubens` command. Type the below command:
 
 `kubens`{{execute}}
 
@@ -18,9 +18,9 @@ Let's now switch back to the `default` namespace:
 
 `kubens default`{{execute}}
 
-Let's clean up the environment by deleting the pods we deployed in the previous steps:
+ Let's clean up the environment by deleting the pods we deployed in the previous steps:
 
-To delete the `nginx` pod in the `frontend` namespace, type or click on the command below:
+To delete the `nginx` pod in the `frontend` namespace, type  belwo command:
 
 `kubectl delete pod nginx -n frontend`{{execute}}
 

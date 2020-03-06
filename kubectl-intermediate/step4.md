@@ -1,6 +1,6 @@
-We have placed a script in the home user directory to install `kubectx`, let's run it:
+We have placed a script in the home user directory to install `kubectx`. Type the below command to install it:
 
-`ls -la && ./kubectx.sh`{{execute}}
+`~/kubectx.sh`{{execute}}
 
 When the installion is done, type the `kubectx` command to list all the contexts:
 
@@ -8,13 +8,13 @@ When the installion is done, type the `kubectx` command to list all the contexts
 
 Notice that the current active context `kubernetes-admin@kubernetes` is highlighted in yellow
 
-To switch between contexts, type  `kubectx CONTEXT NAME`
+To switch between contexts, you can now type `kubectx CONTEXT NAME`.
 
 Let's switch to the `dev-context` by typing the below command:
 
 `kubectx dev-context`{{execute}}
 
-Let's switch back to the `kubernetes-admin@kubernetes` context:
+Go ahead and switch back to the `kubernetes-admin@kubernetes` context:
 
 `kubectx kubernetes-admin@kubernetes`{{execute}}
 

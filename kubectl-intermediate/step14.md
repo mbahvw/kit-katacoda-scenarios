@@ -16,10 +16,10 @@ Let's filter all the pod names along with their current `nginx` image version us
 
 `kubectl get pods -o custom-columns=Pod_NAME:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}
 
-Now, let's proceed with the update. We will add the `--record` flag to capture and record the history of the rollout: Type the below or click on it:
+Now, let's proceed with the update. We will add the `--record` flag to capture and record the history of the rollout: Type the below command:
 
 `kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
 
 Alternatively, you can achieve the same result by editing the deployment manifest either manually or using the `kubectl edit deployment DEPLOYMENT NAME`.  The deployment will be opened in the default text editor (typically `vim`). Edit the  .spec.template.spec.containers[].image key's value by changing the image to `nginx:1.17` and saving the changes.  As long as the manifest validates properly, the deployment will be updated in the cluster.
 
-Click on the Continue button to move on to the next step.
+
