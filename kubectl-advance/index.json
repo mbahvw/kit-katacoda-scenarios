@@ -51,6 +51,7 @@
       {
         "title": "Step 9",
         "code": "clear.sh",
+        "courseData": "delete-mypod.sh",
         "text": "step9.md"
       },
       {

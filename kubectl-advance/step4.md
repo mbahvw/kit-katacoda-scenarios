@@ -21,7 +21,8 @@ We can first list all the pods in that namespace:
 `kubectl get pods`{{execute}}  
 
 Let's get the name of the first pod, assign it to a variable and run the `pod-dive` plugin:  
-`POD=$(kubectl get pods -o=jsonpath='{.items[0].metadata.name}') && echo $POD`{{execute}}  
+`POD=$(kubectl get pods -o=jsonpath='{.items[0].metadata.name}') && echo $POD`{{execute}} 
+
 `kubectl pod-dive $POD`{{execute}}`  
 
 The above output shows a nice pod resource tree (node, namespace, type of resource, etc,).  
@@ -44,4 +45,4 @@ Finally, let's revisit the context plugin:
 
 In the intermediate scenario, we used  the `kubectx` plugin, which is just an alias to the `kubectl ctx` command.  
 
-The non-plugin alternative is to use `kubectl get contexts`{{execute}} to get the user who is mapped to the context.
+The non-plugin alternative is to use `kubectl config get-contexts`{{execute}} to get the user who is mapped to the context.

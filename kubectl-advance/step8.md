@@ -13,7 +13,7 @@ Here is how it is used with the  `kubectl` command:
 
 Let's taint `node01`  as dedicated to the devops group only:
 
-`kubectl taint node node01 dedicated=devops-group:Noschedule`{{execute}}
+`kubectl taint node node01 dedicated=devops-group:NoSchedule`{{execute}}
 
 Verify whether the taint has been applied:
 `kubectl get nodes -o custom-columns=NAME:.metadata.name,TAINTS:.spec.taints[*].key`{{execute}}
@@ -24,11 +24,11 @@ Let's try to deploy a single pod:
 
 If you display the pod, you will see that it is in a pending state:
 
-`kubectl get pods`{{execurte}}
+`kubectl get pods`{{execute}}
 
-Since both nodes in this cluster have taints, the pod couldn't be scheduled. To see error,  we can check the events:
+Since both nodes in this cluster have taints, the pod failed to be scheduled. To see error, type the below  command and check the events section:
 
-`kubectl describe pod my-pod`{{execute}}
+`kubectl describe pod my-app`{{execute}}
 
 Alternatively, you can run the below command:
 

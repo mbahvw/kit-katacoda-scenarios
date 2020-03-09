@@ -7,7 +7,7 @@ In the previous scenario [intermediate kubectl](https://katacoda.com/mbah-vmw/sc
 
 For the full list of available plugins, please view them [here](https://github.com/kubernetes-sigs/krew-index/blob/master/plugins.md)
 
-Let's install `krew`.  Run the `install-krew.sh`:
+Let's install `krew` by running the `install-krew.sh` script:
 
 `~/krew-install/install-krew.sh`{{execute}}
 
