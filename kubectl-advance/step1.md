@@ -3,7 +3,7 @@ In the previous scenario [intermediate kubectl](https://katacoda.com/mbah-vmw/sc
 - `access-matrix` - shows an RBAC (role based access control) access matrix for server resources
 - `NS` - view or change switch namespace contexts
 - `CTX` - switch between Kubernetes cluster contexts
-- `tail` - stream logs from multiple pods and containers
+
 
 For the full list of available plugins, please view them [here](https://github.com/kubernetes-sigs/krew-index/blob/master/plugins.md)
 

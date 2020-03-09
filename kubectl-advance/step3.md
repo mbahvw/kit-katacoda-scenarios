@@ -1,3 +1,5 @@
+# Installing plugins using krew
+
 Let's go ahead and install some of these plugins:
 
 ```bash
@@ -13,12 +15,12 @@ pod-dive
 pod-logs
 whoami
 who-can
-tail
 EOF
 ```{{execute}}
 
 
-Click on or type the following command to install:
+Type the below command to install it:
+
 `for plugin in $(cat ~/plugins); do echo -en $(kubectl krew install $plugin);done`{{execute}}  
 
 

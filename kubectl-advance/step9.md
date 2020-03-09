@@ -1,19 +1,19 @@
-# Interacting  with Nodes - `cordon`
+# Interacting with Nodes - `tolerations`
 
-Let's now try to get the pods that are deployed on the master node and assign them to a variable:  
-`POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')  && echo $POD_MASTER`{{execute}}  
+In this scenario we will create a deployment configuration by adding some tolerations to the pods so they can be created or migrated onto the master node.  
 
-Now, let's run the pod-dive plugin:  
-`kubectl pod-dive $POD_MASTER`{{execute}}  
+We currently have only two nodes (a control node, AKA master node, and a worker node). By default, the control node is tainted with `node-role.kubernetes.io/master`. Therefore, any pod that does not have a tolerance matching the node's taint cannot be deployed onto the control node.  
 
-*This output shows a nice summary of the pod's resource tree*  
+Let's now take a look at the deployment manifest file and check the added tolerations:  
+`cd ~/deployment && cat nginx-deployment.yaml | grep -A5 tolerations`{{execute}}  
 
-Before we drain the node, we will `cordon` it first. `cordon` means ensuring that no pod can be scheduled on the particular node.  
+We can now deploy the manifest using either the `apply` or `create` command:  
+`kubectl create -f nginx-deployment.yaml`{{execute}}  
 
-Let's go ahead and cordon `node01`:  
-`kubectl cordon node01`{{execute}}  
+Verify that the pods have been created:  
+`kubectl get pods`{{execute}}  
 
-If you list the nodes now, you will find the status of `node01` set to `Ready,SchedulingDisabled`:  
-`kubectl get nodes`{{execute}}  
+Let's also verify that some of the pods are created on the control node:
+`kubectl get pods -o wide`{{execute}}  
 
-Please Continue to the next step.
+As you may notice, some of the pods have been deployed on the control/master node.  

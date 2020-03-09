@@ -1,19 +1,45 @@
-# Interacting with Nodes
+# Interacting with Nodes - `taint`
 
-In this scenario we will create a deployment configuration by adding some tolerations to the pods so they can be created or migrated onto the master node.  
+A taint consist of a key, value, and effect. As an argument, it is expressed as key=value:effect.
 
-We currently have only two nodes (a control node, AKA master node, and a worker node). By default, the control node is tainted with `node-role.kubernetes.io/master`. Therefore, any pod that does not have a tolerance matching the node's taint cannot be deployed onto the control node.  
+The effect should be one these values: `NoShedule, PreferNoSchedule, or NoExecute`
 
-Let's now take a look at the deployment manifest file and check the added tolerations:  
-`cd ~/deployment && cat nginx-deployment.yaml | grep -A5 tolerations`{{execute}}  
+Currently a taint can only be applied to a node, and when a node is tainted, pod cannot be scheduled in it unless a PodSpec toleration matching the taint is added in the pod. 
 
-We can now deploy the manifest using either the `apply` or `create` command:  
-`kubectl create -f nginx-deployment.yaml`{{execute}}  
+Here is how it is used with the  `kubectl` command:
 
-Verify that the pods have been created:  
-`kubectl get pods`{{execute}}  
+`kubectl taint NODE NAME KEY_1=VAL_1:TAINT_EFFECT`
 
-Let's also verify that some of the pods are created on the control node:
-`kubectl get pods -o wide`{{execute}}  
 
-As you may notice, some of the pods have been deployed on the control/master node.  
+Let's taint `node01`  as dedicated to the devops group only:
+
+`kubectl taint node node01 dedicated=devops-group:Noschedule`{{execute}}
+
+Verify whether the taint has been applied:
+`kubectl get nodes -o custom-columns=NAME:.metadata.name,TAINTS:.spec.taints[*].key`{{execute}}
+
+Let's try to deploy a single pod:
+
+`kubectl run my-app --image=nginx --restart=Never`{{execute}}
+
+If you display the pod, you will see that it is in a pending state:
+
+`kubectl get pods`{{execurte}}
+
+Since both nodes in this cluster have taints, the pod couldn't be scheduled. To see error,  we can check the events:
+
+`kubectl describe pod my-pod`{{execute}}
+
+Alternatively, you can run the below command:
+
+`kubectl get events`{{execute}} 
+
+There are 2 ways to solve this issue. We can add toleration matching the taint that was applied to the nodes, or remove the taint from the nodes. For now, let's remove the taint on node01:
+
+`kubectl taint node node01 dedicated-`{{execute}}
+
+*Note: to remove a taint, append the `-` to the value of the key.*
+
+Once the taint is remove, the scheduler will place the pending pod onto the untainted node in this case node01. Let's verify that:
+
+`kubectl get pod -o wide`{{execute}}

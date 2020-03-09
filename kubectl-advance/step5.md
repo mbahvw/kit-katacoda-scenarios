@@ -1,4 +1,4 @@
-# Using logs/tail to debug problems with pods  
+# Interacting with pods - `logs` 
 
 To dump pod logs into the standard output, use the `kubectl logs POD_NAME`
 

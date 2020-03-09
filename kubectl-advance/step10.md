@@ -1,37 +1,19 @@
-# Interacting with Nodes - `drain`  
+# Interacting  with Nodes - `cordon`
 
-Draining a node means we are removing all running pods from the node, typically performed for maintenance activities.
+Let's now try to get the pods that are deployed on the master node and assign them to a variable:  
+`POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')  && echo $POD_MASTER`{{execute}}  
 
-Open a second terminal (click the `+` button at the top of the terminal and select 'Open New Terminal') and run the below command to watch the output in **Terminal 2**:  
-`watch -d kubectl get pods -o wide`{{execute}}  
+Now, let's run the pod-dive plugin:  
+`kubectl pod-dive $POD_MASTER`{{execute}}  
 
-Pay attention to the `NODE` column, which will show how the pods are migrating from `node01` to the `master` node.  
+*This output shows a nice summary of the pod's resource tree.*  
 
-Go back to **Terminal 1** by clicking the 'Terminal' tab at the top of the screen. Run this command to drain `node01`:    
-`kubectl drain node01 --ignore-daemonsets`{{execute}}  
+Before we drain the node, we will `cordon` it first. `cordon` means ensuring that no pod can be scheduled on the particular node.  
 
-In **Terminal 1**, you will observe the pods are being evicted, and in **Terminal 2**, you will observe, how the pods are being terminated and re-deployed on the `master` node.
+Let's go ahead and cordon `node01`:  
+`kubectl cordon node01`{{execute}}  
 
-All your pods are now running on the master node at this point. You can now perform whatever maintenance is required on `node01` and when done, you can `uncordon` it to make it schedulable once again.
-
-Please keep **Terminal 2** open. Now, let's `uncordon` node01.  
-
-In **Terminal 1**, ensure that `node01` is still at `Ready,SchedulingDisabled` mode:  
+If you list the nodes now, you will find the status of `node01` set to `Ready,SchedulingDisabled`:  
 `kubectl get nodes`{{execute}}  
 
-Now, let's `uncordon` it:
-`kubectl uncordon node01`{{execute}}
-
-Verify `node01` is now in `Ready` mode:
-`kubectl get nodes`{{execute}}
-
-In **Terminal 2**, you will  notice that the pods have not been moved back to `node01`. These Pods will not be rescheduled automatically to the new nodes.
-
-To get some pods running on `node01`, let's try to scale up the deployment to 8 replicas.  
-
-In **Terminal 1**:  
-`kubectl scale deployment/nginx-deployment --replicas=8`{{execute}}  
-
-In **Terminal 2**, you will notice, some of the pods are now running on `node01`.
-
-**Note:** *The `--ignore-daemonsets` flag in the `kubectl drain` command is required because DaemonSet pods are required to run on each node when deployed.  This allows pods that are not part of a DaemonSet to be re-deployed on another available node*
+Please Continue to the next step.

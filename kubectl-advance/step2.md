@@ -22,6 +22,6 @@ Here are some plugins that are usually very handy as an administrator:
 | `pod-logs` | Display a list of pods to get logs from |
 | `whoami` | Shows the subject that's currently authenticated |
 | `who-can` | Shows which subjects have RBAC permissions |
-| `tail` | Logs from multiple pods and containers |
+
 
 As you can see, there are many plugins that can make your experience as a Kubernetes administrator easier, so explore them.

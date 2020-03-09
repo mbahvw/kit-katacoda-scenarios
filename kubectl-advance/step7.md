@@ -1,4 +1,4 @@
-# Interacting with Pods - the `cp` command
+# Interacting with Pods -  `cp` 
 
 You can use the `cp` command to copy files and directories to and from containers within a pod.  
 
