@@ -21,58 +21,63 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - `kubectl` plugins usage examples",
+        "title": "Step 4 - kubectl plugins usage examples",
         "code": "clear.sh",
         "courseData": "create-ns-deploy.sh",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Interacting with pods: `logs` ",
+        "title": "Step 5 - Interacting with pods: logs",
         "courseData": "delete-deploy.sh",
         "code": "clear.sh",
         "text": "step5.md"
       },
       {
-        "title": "Step 6 - Interacting with pods: `exec or iexec`",
+        "title": "Step 6 - Interacting with pods: exec or iexec",
         "code": "clear.sh",
         "text": "step6.md"
       },
       {
-        "title": "Step 7 - Interacting with Pods: `cp`",
+        "title": "Step 7 - Interacting with Pods: cp",
         "code": "clear.sh",
         "text": "step7.md"
       },
       {
-        "title": "Step 8 - Interacting with Nodes: `taint`",
+        "title": "Step 8 - Interacting with Nodes: taint",
         "courseData": "default-ns.sh",
         "code": "clear.sh",
         "text": "step8.md"
       },
       {
-        "title": "Step 9 - Interacting with Nodes: `tolerations`",
+        "title": "Step 9 - Interacting with Nodes: tolerations",
         "code": "clear.sh",
         "courseData": "delete-mypod.sh",
         "text": "step9.md"
       },
       {
-        "title": "Step 10 - Interacting with Nodes: `cordon`",
+        "title": "Step 10 - Interacting with Nodes: cordon",
         "code": "clear.sh",
         "text": "step10.md"
       },
       {
-        "title": "Step 11 - # Interacting with Nodes - `drain`",
+        "title": "Step 11 - # Interacting with Nodes: drain",
         "code": "clear.sh",
         "text": "step11.md"
       },
       {
-        "title": "Step 12 - Clean up",
+        "title": "Step 12 - Interacting with Nodes/Pods - top",
         "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Step 13 - Additional resources",
+        "title": "Step 13 - Clean up",
         "code": "clear.sh",
         "text": "step13.md"
+      },
+      {
+        "title": "Step 14 - Additional resources",
+        "code": "clear.sh",
+        "text": "step14.md"
       }
     ],
     "intro": {
