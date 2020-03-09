@@ -31,18 +31,4 @@ Now, let's try to get the memory and CPU utilization of pods in all namespaces
 
 We can also gather the metrics of all the pods in the kube-system namespace:
 
-`kubectl get pods -n kube-system`{[execute]}
-
-
-
-
-
-Please go ahead and delete the `deployment`: 
-
-`kubectl delete deployment/nginx-deployment`{{execute}}  
-
-Verify whether the pods and deployment have been deleted: 
-
-`kubectl get pods`{{execute}} 
-
-`kubectl get deployment/nginx-deployment`{{execute}}
+`kubectl get pods -n kube-system`{{execute}}
