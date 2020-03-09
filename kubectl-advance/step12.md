@@ -31,4 +31,4 @@ Now, let's try to get the memory and CPU utilization of pods in all namespaces
 
 We can also gather the metrics of all the pods in the kube-system namespace:
 
-`kubectl get pods -n kube-system`{{execute}}
+`kubectl top pods -n kube-system`{{execute}}

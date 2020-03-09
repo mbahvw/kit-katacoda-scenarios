@@ -8,7 +8,7 @@ Pay attention to the `NODE` column, which will show how the pods are migrating f
 Go back to **Terminal 1** by clicking the 'Terminal' tab at the top of the screen. Run this command to drain `node01`:    
 `kubectl drain node01 --ignore-daemonsets`{{execute}}  
 
-In **Terminal 1**, you will observe the pods are being evicted, and in **Terminal 2**, you will observe, how the pods are being terminated and re-deployed on the `master` node.
+In **Terminal 1**, you will observe the pods are being evicted, and in **Terminal 2**, you will observe, how the pods in node01 are being terminated and re-deployed on the `master` node.
 
 All your pods are now running on the master node at this point. You can now perform whatever maintenance is required on `node01` and when done, you can `uncordon` it to make it schedulable once again.
 
