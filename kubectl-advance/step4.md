@@ -1,4 +1,4 @@
-# kubectl plugins usage examples
+
 
 Let's explore some of these plugins. We can begin by listing who the current authenticated user is:  
 `kubectl whoami`{{execute}}

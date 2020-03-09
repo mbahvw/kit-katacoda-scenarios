@@ -1,5 +1,3 @@
-# Interacting  with Nodes - `cordon`
-
 Let's now try to get the pods that are deployed on the master node and assign them to a variable:  
 `POD_MASTER=$(kubectl get pods -o=jsonpath='{.items[?(@.spec.nodeName == "master")].metadata.name}')  && echo $POD_MASTER`{{execute}}  
 

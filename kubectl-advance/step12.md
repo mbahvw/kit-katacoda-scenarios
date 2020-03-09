@@ -1,6 +1,3 @@
-# Clean up
-
-
 Please go ahead and delete the `deployment`: 
 
 `kubectl delete deployment/nginx-deployment`{{execute}}  

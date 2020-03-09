@@ -1,5 +1,3 @@
-# Interacting with pods - `exec or iexec`
-
 Let's fire up an `nginx` container:  
 
 `kubectl run test --image=nginx --generator=run-pod/v1 `{{execute}}  

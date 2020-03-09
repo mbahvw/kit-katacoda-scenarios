@@ -1,5 +1,3 @@
-# Interacting with pods - `logs` 
-
 To dump pod logs into the standard output, use the `kubectl logs POD_NAME`
 
 Let's switch to the kube-system namespace and access some logs:  

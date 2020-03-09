@@ -1,5 +1,3 @@
-# Installing plugins using krew
-
 Let's go ahead and install some of these plugins:
 
 ```bash

@@ -1,5 +1,3 @@
-# Interacting with Nodes - `drain`  
-
 Draining a node means we are removing all running pods from the node, typically performed for maintenance activities.
 
 Open a second terminal (click the `+` button at the top of the terminal and select 'Open New Terminal') and run the below command to watch the output in **Terminal 2**:  

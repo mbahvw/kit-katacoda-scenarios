@@ -1,5 +1,3 @@
-# Interacting with Nodes - `taint`
-
 A taint consist of a key, value, and effect. As an argument, it is expressed as key=value:effect.
 
 The effect should be one these values: `NoShedule, PreferNoSchedule, or NoExecute`

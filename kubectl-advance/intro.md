@@ -2,6 +2,10 @@ In this scenario, you will learn advanced topics that can be used in the field a
 
   - `krew` a kubectl plugin manager
   - Interaction with pods
-    - using logs, cp, and exec
+    - logs 
+    - cp
+    - exec
   - Interacting with nodes:
-    - using taint, tolerations, cordon, and drain
+    - taint and tolerations
+    - cordon/uncordon
+    - drain

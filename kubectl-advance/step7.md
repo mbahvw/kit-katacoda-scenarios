@@ -1,5 +1,3 @@
-# Interacting with Pods -  `cp` 
-
 You can use the `cp` command to copy files and directories to and from containers within a pod.  
 
 Using the test `nginx` container pod that we created in the previous step, let's copy the content of the `krew-install` directory to the test container's `tmp` directory:

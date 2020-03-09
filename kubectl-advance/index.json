@@ -11,66 +11,66 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Kubectl and krew usage",
         "code": "clear.sh",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Install plugins via krew",
         "code": "clear.sh",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Step 4 - `kubectl` plugins usage examples",
         "code": "clear.sh",
         "courseData": "create-ns-deploy.sh",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - Interacting with pods: `logs` ",
         "courseData": "delete-deploy.sh",
         "code": "clear.sh",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Step 6 - Interacting with pods: `exec or iexec`",
         "code": "clear.sh",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Step 7 - Interacting with Pods: `cp`",
         "code": "clear.sh",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Step 8 - Interacting with Nodes: `taint`",
         "courseData": "default-ns.sh",
         "code": "clear.sh",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Step 9 - Interacting with Nodes: `tolerations`",
         "code": "clear.sh",
         "courseData": "delete-mypod.sh",
         "text": "step9.md"
       },
       {
-        "title": "Step 10",
+        "title": "Step 10 - Interacting with Nodes: `cordon`",
         "code": "clear.sh",
         "text": "step10.md"
       },
       {
-        "title": "Step 11",
+        "title": "Step 11 - # Interacting with Nodes - `drain`",
         "code": "clear.sh",
         "text": "step11.md"
       },
       {
-        "title": "Step 12",
+        "title": "Step 12 - Clean up",
         "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Step 13",
+        "title": "Step 13 - Additional resources",
         "code": "clear.sh",
         "text": "step13.md"
       }
