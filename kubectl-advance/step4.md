@@ -45,4 +45,6 @@ Finally, let's revisit the context plugin:
 
 In the intermediate scenario, we used  the `kubectx` plugin, which is just an alias to the `kubectl ctx` command.  
 
-The non-plugin alternative is to use `kubectl config get-contexts`{{execute}} to get the user who is mapped to the context.
+The non-plugin alternative is to run this command to switch between context:
+
+`kubectl config use-context CONTEXT_NAME` 
