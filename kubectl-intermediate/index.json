@@ -83,6 +83,7 @@
       },
       {
         "title": "Patch resources",
+        "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step16.md"
       },
@@ -93,7 +94,6 @@
       },
       {
         "title": "Additional Resources",
-        "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step18.md"
       }
