@@ -82,7 +82,7 @@
         "text": "step15.md"
       },
       {
-        "title": "Patch resources",
+        "title": "Patch and label resources",
         "courseData": "delete-pods.sh",
         "code": "clear.sh",
         "text": "step16.md"
