@@ -1,6 +1,6 @@
 If you want to get more detailed information about the Deployment, run this command:
 
-`kubectl describe deployment`{{execute}}
+`kubectl describe deployment nginx-deployment -n default`{{execute}}
 
 This shows key information about the Deployment such as:
 - Labels
@@ -10,5 +10,5 @@ This shows key information about the Deployment such as:
 - Events
 
 **Pro Tip**:
-To get detailed information for a particular deployment in a particular namespace:
-`kubectl describe deploy nginx-deployment -n default`{{execute}}
+To get detailed information for all Deployments in the Default Namespace use this command:
+`kubectl describe deployment`{{execute}}
