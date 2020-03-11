@@ -1,18 +1,19 @@
 Now that we have created two new namespaces, we can deploy a container in each of the namespaces.
 
-Let's deploy a single `nginx` container application in the `frontend` namespace using the `--generator` flag. Type the below command:
-
-`kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
-
-*The `--generator` flag tells the `kubectl run` command to pin the resource to a specific apiVersion specification. In this case apiVersion:v1 and kind:pod.*
-
-Let's use another method to deploy a single `redis` container into the `backend` namespace using  `--restart=Never`. Type the below command:
+Let's  deploy a single `redis` container into the `backend` namespace using  `kubectl run` with the `--restart=Never`. Type the below command:
 
 `kubectl run redis --image=redis -n backend --restart=Never `{{execute}}
 
-*The `--restart=Never` flag tells the `kubectl run` command to create a single pod. This yields the same thing result as the --generator=run/v1 above*
+*Note: The `--restart=Never` flag tells the `kubectl run` command to create a single pod.*
 
-Let's verify if our pods have been created:
+Let's use another method to deploy a single `nginx` container application in the `frontend` namespace using  `kubectl run` with the `--generator` flag. Type the below command:
+
+`kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
+
+*Note: The `--generator` flag tells the `kubectl run` command to pin the resource to a specific apiVersion specification. In this case apiVersion:v1 and kind:pod. This flag is being depracated*
+
+
+Now. let's verify if our pods have been created:
 
 `kubectl get pods`{{execute}}
 

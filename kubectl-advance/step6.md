@@ -1,6 +1,6 @@
 Let's fire up an `nginx` container:  
 
-`kubectl run test --image=nginx --generator=run-pod/v1 `{{execute}}  
+`kubectl run test --image=nginx --restart=Never`{{execute}}  
 
 Verify whether the  container is up and running:  
 `kubectl get pods`{{execute}}  
@@ -9,9 +9,9 @@ Now let's get the output of the `date` command from the running `test` container
 `kubectl exec test date`{{execute}}  
 
 
- You can also use the `iexec` plug-in. Let's get the content of the `/etc/resolv.conf/` file from the running container:  
+You can also use the `iexec` plug-in. Let's get the content of the `/etc/resolv.conf/` file from the running container:  
 
- `kubectl iexec test cat /etc/resolv.conf`{{execute}}  
+`kubectl iexec test cat /etc/resolv.conf`{{execute}}  
 
 To login and interact with the container's shell, type the below command:  
 

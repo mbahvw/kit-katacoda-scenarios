@@ -25,7 +25,7 @@ Let's get the CPU and memory utilization for all nodes in the cluster:
 
 `kubectl top nodes`{{execute}}
 
-Now, let's try to get the memory and CPU utilization of pods in all namespaces
+Now, let's try to get the memory and CPU utilization of pods in all namespaces:
 
 `kubectl top pods --all-namespaces`{{execute}}
 

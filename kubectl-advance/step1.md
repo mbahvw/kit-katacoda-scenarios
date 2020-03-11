@@ -1,4 +1,4 @@
-In the previous scenario [intermediate kubectl](https://katacoda.com/mbah-vmw/scenarios/kubectl-intermediate), we introduced you to a few `kubectl` plugins (NS and CTX). Now, we are going to introduce you to `krew`, which is a plugin manager for `kubectl`. We will use `krew` to install various plugins that we will use throughout the scenario. We will be using the following plugins:
+In the previous scenario [kubectl intermediate](https://katacoda.com/mbah-vmw/scenarios/kubectl-intermediate), we introduced you to a few `kubectl` plugins (NS and CTX). Now, we are going to introduce you to `krew`, which is a plugin manager for `kubectl`. We will use `krew` to install various plugins that we will use throughout the scenario. We will be using the following plugins:
 
 - `access-matrix` - shows an RBAC (role based access control) access matrix for server resources
 - `NS` - view or change switch namespace contexts

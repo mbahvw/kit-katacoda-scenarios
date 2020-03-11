@@ -20,7 +20,8 @@ Let's switch to one of the namespaces and run the `pod-dive` plugin command to g
 We can first list all the pods in that namespace:  
 `kubectl get pods`{{execute}}  
 
-Let's get the name of the first pod, assign it to a variable and run the `pod-dive` plugin:  
+Let's get the name of the first pod, assign it to a variable and run the `pod-dive` plugin:
+
 `POD=$(kubectl get pods -o=jsonpath='{.items[0].metadata.name}') && echo $POD`{{execute}} 
 
 `kubectl pod-dive $POD`{{execute}}`  
@@ -33,7 +34,7 @@ We can also display all the images in all namespaces:
 `kubectl images -A`{{execute}}  
 
 
-Let's also explore the `access-matrix` plug-in, which is handy when looking for a RBAC Access matrix for Kubernetes resources:
+Let's aslo explore the `access-matrix` plug-in, which is handy when looking for a RBAC Access matrix for Kubernetes resources:
 
 `kubectl access-matrix`{{execute}}  
 
