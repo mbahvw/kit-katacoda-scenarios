@@ -23,3 +23,4 @@ Now, let's proceed with the update. We will add the `--record` flag to capture a
 Alternatively, the result above can be  achieved by editing the deployment manifest either manually or using the `kubectl edit deployment DEPLOYMENT NAME`.  The deployment will be opened in the default text editor (typically `vim`). Edit the  .spec.template.spec.containers[].image key's value by changing the image to `nginx:1.17` and saving the changes.  As long as the manifest validates properly, the deployment will be updated in the cluster.
 
 
+**NOTE:** *Scaling a deployment using the imperative `kubectl scale` command is not best practice. The best practice is to manually edit the deployment manifest file and update the spec.replicas field, save it, and run the `kubectl apply -f DEPPLYOMET.YAML` command. This way, the deployment manifest file is always the source of truth.*

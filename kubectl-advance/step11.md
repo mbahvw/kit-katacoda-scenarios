@@ -1,4 +1,4 @@
-Draining a node means we are removing all running pods from the node, typically performed for maintenance activities.
+Draining a node means removing all running pods from the node, typically performed for maintenance activities.
 
 Open a second terminal (click the `+` button at the top of the terminal and select 'Open New Terminal') and run the below command to watch the output in **Terminal 2**: 
 
@@ -20,11 +20,11 @@ In **Terminal 1**, ensure that `node01` is still at `Ready,SchedulingDisabled` m
 
 `kubectl get nodes`{{execute}}  
 
-Now, let's `uncordon` it:
+Now, let's `uncordon` node01:
 
 `kubectl uncordon node01`{{execute}}
 
-Verify `node01` is now in `Ready` mode:
+Verify `node01` is now in `Ready` status:
 
 `kubectl get nodes`{{execute}}
 
@@ -33,7 +33,7 @@ In **Terminal 2**, you will  notice that the pods have not been moved back to `n
 To get some pods running on `node01`, let's try to scale up the deployment to 8 replicas.  
 
 In **Terminal 1**:
-  
+
 `kubectl scale deployment/nginx-deployment --replicas=8`{{execute}}  
 
 In **Terminal 2**, you will notice, some of the pods are now running on `node01`.

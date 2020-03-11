@@ -27,3 +27,6 @@ node01       4
 In step 9, we deployed multiple pods, so let's find all the pods that were deployed with the label `image:nginx:1.16` and output them in a tabulated format with column headers POD_NAME and IMAGE_VER:
 
 `kubectl get pods -n frontend -o custom-columns=POD_NAME:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}
+
+
+**NOTE:** *Your environment may have different CPU sizes for master and node01*

@@ -1,6 +1,6 @@
-You can use the `cp` command to copy files and directories to and from containers within a pod.  
+The `cp` command can be used to copy files and directories to and from containers within a pod.  
 
-Using the test `nginx` container pod that we created in the previous step, let's copy the content of the `krew-install` directory to the test container's `tmp` directory:
+Using the test `nginx` container pod we created in the previous step, let's copy the content of the `krew-install` directory to the test container's `/tmp` directory:
 
 `kubectl cp ~/krew-install test:/tmp`{{execute}}  
 
@@ -26,5 +26,6 @@ Verify if the file has been copied from the container within the `test` pod:
 
 ## Clean up:
 
-Please delete the pod before moving on to the next step:  
+Please delete the pod before moving on to the next step: 
+
 `kubectl delete pod test`{{execute}}

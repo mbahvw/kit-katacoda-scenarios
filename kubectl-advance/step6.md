@@ -1,22 +1,22 @@
-Let's create an `nginx` container called `test`:  
+Let's create a single container pod called `test`  with an `nginx` image:  
 
 `kubectl run test --image=nginx --restart=Never`{{execute}}  
 
-Verify whether the `test` container is up and running:  
+Verify whether the `test` container is up and running: 
+
 `kubectl get pods`{{execute}}  
 
-Now let's get the output of the `date` command from the running `test` container without logging into it:  
+Now let's get the output of the `date` command from the running `test` container without logging into it:
+
 `kubectl exec test date`{{execute}}  
 
-
-You can also use the `iexec` plug-in. Let's get the content of the `/etc/resolv.conf/` file from the running container:  
+Using the `iexec` plug-in, let's get the content of the `/etc/resolv.conf/` file from the running `test` container:  
 
 `kubectl iexec test cat /etc/resolv.conf`{{execute}}  
 
 To login and interact with the container's shell, type the below command:  
 
-`kubectl iexec test  /bin/sh`{{execute}}  
-
+`kubectl iexec test  /bin/sh`{{execute}} 
 
 From the shell prompt, type the below command or copy/paste it into the shell:  
 
@@ -28,4 +28,6 @@ Check the contents of the file:
 
 Type `exit` to exit the interactive shell.
 
-*Alternatively,  use the `kubectl exec test -it -- /bin/sh`{{execute}}*
+Alternatively,  you can use the below command:
+
+`kubectl exec test -it -- /bin/sh`{{execute}}
