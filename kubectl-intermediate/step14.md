@@ -20,6 +20,6 @@ Now, let's proceed with the update. We will add the `--record` flag to capture a
 
 `kubectl set image deployment/nginx-deployment nginx=nginx:1.17 --record`{{execute}}
 
-Alternatively, you can achieve the same result by editing the deployment manifest either manually or using the `kubectl edit deployment DEPLOYMENT NAME`.  The deployment will be opened in the default text editor (typically `vim`). Edit the  .spec.template.spec.containers[].image key's value by changing the image to `nginx:1.17` and saving the changes.  As long as the manifest validates properly, the deployment will be updated in the cluster.
+Alternatively, the result above can be  achieved by editing the deployment manifest either manually or using the `kubectl edit deployment DEPLOYMENT NAME`.  The deployment will be opened in the default text editor (typically `vim`). Edit the  .spec.template.spec.containers[].image key's value by changing the image to `nginx:1.17` and saving the changes.  As long as the manifest validates properly, the deployment will be updated in the cluster.
 
 

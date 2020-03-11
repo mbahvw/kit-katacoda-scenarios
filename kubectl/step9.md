@@ -4,7 +4,7 @@ If you want to get more detailed information about the Deployment, run this comm
 
 This shows key information about the Deployment such as:
 - Labels
-- Amount of Replicas
+- Number of Replicas
 - Annotations
 - Deployment Strategy Type
 - Events

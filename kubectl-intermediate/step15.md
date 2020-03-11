@@ -6,7 +6,7 @@ To show the output of the rollout history, type the below command:
 
 `kubectl rollout history deployment/nginx-deployment`{{execute}}
 
-Now let's check our pods to ensure the `nginx` image version has been properly updated using custom-column headers:
+Now let's check our pods to ensure the `nginx` image version has been properly updated using custom-columns:
 
 `kubectl get pods -o custom-columns=Pod_MAME:.metadata.name,IMAGE-VER:.spec.containers[*].image`{{execute}}
 
