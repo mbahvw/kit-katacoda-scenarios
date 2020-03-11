@@ -1,8 +1,8 @@
-Let's fire up an `nginx` container:  
+Let's create an `nginx` container called `test`:  
 
 `kubectl run test --image=nginx --restart=Never`{{execute}}  
 
-Verify whether the  container is up and running:  
+Verify whether the `test` container is up and running:  
 `kubectl get pods`{{execute}}  
 
 Now let's get the output of the `date` command from the running `test` container without logging into it:  

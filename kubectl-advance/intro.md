@@ -7,6 +7,7 @@ In this scenario, you will learn advanced topics that can be used in the field a
     - `kubectl exec`
   - Interacting with nodes:
     - `kubectl taint` 
-    - `Using Tolerations`
+    - `Pod's Tolerations`
     - `kubectl cordon/uncordon`
     - `kubectl drain`
+    - `kubectl top` 
