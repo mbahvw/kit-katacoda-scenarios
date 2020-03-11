@@ -16,7 +16,7 @@ Let's verify with the `--show-labels` flag:
 
 `kubectl get pod nginx --show-labels`{{execute}}
 
-You can also use the `kubectl label` command to add a label, update an existing label, or delete a lable. Type the below command to update the label `env:dev` to `env:prod`:
+We can also use the `kubectl label` command to add a label, update an existing label, or delete a label. Type the below command to update the label `env:dev` to `env:prod`:
 
 `kubectl label pod nginx env=prod --overwrite`{{execute}}
 
@@ -26,7 +26,7 @@ Verify whether the label has been updated:
 
 `kubectl get pod nginx --show-labels`{{execute}}
 
-To delete the label, append the `-` to `env` , which is the value of the label's key.  Type the command:
+To delete the label, append the `-` to `env` , which is the value of the label's key.  Type the below command:
 
 `kubectl label pod nginx env-`{{execute}}
 
