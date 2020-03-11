@@ -6,76 +6,76 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - kubectl Plugin Setup",
+        "title": "kubectl Plugin Setup",
         "code": "clear.sh",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Kubectl and krew usage",
+        "title": "kubectl and krew usage",
         "code": "clear.sh",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Install plugins via krew",
+        "title": "Install plugins via krew",
         "code": "clear.sh",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - kubectl plugins usage examples",
+        "title": "kubectl plugins usage examples",
         "code": "clear.sh",
         "courseData": "create-ns-deploy.sh",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Interacting with pods: logs",
+        "title": "Interacting with pods - kubectl logs",
         "courseData": "delete-deploy.sh",
         "code": "clear.sh",
         "text": "step5.md"
       },
       {
-        "title": "Step 6 - Interacting with pods: exec or iexec",
+        "title": "Interacting with pods - kubectl exec/iexec",
         "code": "clear.sh",
         "text": "step6.md"
       },
       {
-        "title": "Step 7 - Interacting with Pods: cp",
+        "title": "Interacting with Pods - kubectl cp",
         "code": "clear.sh",
         "text": "step7.md"
       },
       {
-        "title": "Step 8 - Interacting with Nodes: taint",
+        "title": "Interacting with Nodes - kubectl taint",
         "courseData": "default-ns.sh",
         "code": "clear.sh",
         "text": "step8.md"
       },
       {
-        "title": "Step 9 - Interacting with Nodes: tolerations",
+        "title": "Interacting with Nodes - Pod's tolerations",
         "code": "clear.sh",
         "courseData": "delete-mypod.sh",
         "text": "step9.md"
       },
       {
-        "title": "Step 10 - Interacting with Nodes: cordon",
+        "title": "Interacting with Nodes- kubectl cordon",
         "code": "clear.sh",
         "text": "step10.md"
       },
       {
-        "title": "Step 11 - # Interacting with Nodes: drain",
+        "title": "Interacting with Nodes - kubectl drain",
         "code": "clear.sh",
         "text": "step11.md"
       },
       {
-        "title": "Step 12 - Interacting with Nodes/Pods - top",
+        "title": "Interacting with Nodes/Pods - kubectl top",
         "code": "clear.sh",
         "text": "step12.md"
       },
       {
-        "title": "Step 13 - Clean up",
+        "title": "Clean up",
         "code": "clear.sh",
         "text": "step13.md"
       },
       {
-        "title": "Step 14 - Additional resources",
+        "title": "Additional resources",
         "code": "clear.sh",
         "text": "step14.md"
       }
