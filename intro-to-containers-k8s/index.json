@@ -1,0 +1,110 @@
+{
+  "title": "Cloud Native Basics: Containers and Kubernetes",
+  "description": "Learn how to build, run, and deploy a container to Kubernetes.",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Getting Oriented",
+        "text": "step1.md"
+      },
+      {
+        "title": "Explore the Dockerfile",
+        "code": "clear.sh",
+        "text": "step2.md"
+      },
+      {
+        "title": "Build a Container Image",
+        "code": "clear.sh",
+        "text": "step3.md"
+      },
+      {
+        "title": "Verify Your Image",
+        "code": "clear.sh",
+        "text": "step4.md"
+      },
+      {
+        "title": "Run a Container",
+        "code": "clear.sh",
+        "text": "step5.md"
+      },
+      {
+        "title": "Verify the Container",
+        "code": "clear.sh",
+        "text": "step6.md"
+      },
+      {
+        "title": "Stop the Container",
+        "code": "clear.sh",
+        "text": "step7.md"
+      },
+      {
+        "title": "Run a Registry",
+        "code": "clear.sh",
+        "text": "step8.md"
+      },
+      {
+        "title": "Tag Your Image",
+        "code": "clear.sh",
+        "text": "step9.md"
+      },
+      {
+        "title": "Push Your Image",
+        "code": "clear.sh",
+        "text": "step10.md"
+      },
+      {
+        "title": "View the Kubernetes Deployment",
+        "code": "clear.sh",
+        "text": "step11.md"
+      },
+      {
+        "title": "Deploy to Kubernetes",
+        "code": "clear.sh",
+        "text": "step12.md"
+      },
+      {
+        "title": "View the Kubernetes Service",
+        "code": "clear.sh",
+        "text": "step13.md"
+      },
+      {
+        "title": "Deploy a Kubernetes Service",
+        "code": "clear.sh",
+        "text": "step14.md"
+      },
+      {
+        "title": "View the Website",
+        "code": "clear.sh",
+        "text": "step15.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "assets": {
+    "host01": []
+  },
+  "environment": {
+    "icon": "fa-kubernetes",
+    "showdashboard": true,
+        "dashboards": [{
+          "name": "DockerSite",
+          "port": 8080
+        },
+        {
+          "name": "KubeSite",
+          "port": 32321
+        }],
+        "uilayout": "terminal-iframe"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
