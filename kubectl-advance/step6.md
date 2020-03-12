@@ -16,7 +16,7 @@ Using the `iexec` plug-in, let's get the content of the `/etc/resolv.conf/` file
 
 To login and interact with the container's shell, type the below command:  
 
-`kubectl iexec test  /bin/sh`{{execute}} 
+`kubectl iexec test`{{execute}} 
 
 From the shell prompt, type the below command or copy/paste it into the shell:  
 

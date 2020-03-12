@@ -1,6 +1,6 @@
-In this step, we have already created a deployment manifest file and added some tolerations to the pods so they can be created or migrated onto the master node.  
+In this step, we have already created in the background a deployment manifest file and added some tolerations to the pods so they can be created or migrated onto the master node.  
 
-There are only two nodes (a control node, AKA master node, and a worker node) in this cluster. By default, the control node is tainted with `node-role.kubernetes.io/master`. Therefore, any pod that does not have a toleration matching the node's taint cannot be deployed onto the control node.  
+There are only two nodes (a control node, AKA master node, and a worker node) in this cluster. And by default, the control node is tainted with `node-role.kubernetes.io/master`, therefore, any pod that does not have a toleration matching the node's taint cannot be deployed onto the control node.  
 
 Let's now take a look at the deployment manifest file and check the added tolerations: 
 

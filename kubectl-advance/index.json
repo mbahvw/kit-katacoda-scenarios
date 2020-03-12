@@ -73,11 +73,6 @@
         "title": "Clean up",
         "code": "clear.sh",
         "text": "step13.md"
-      },
-      {
-        "title": "Additional resources",
-        "code": "clear.sh",
-        "text": "step14.md"
       }
     ],
     "intro": {

@@ -1,4 +1,4 @@
-The `kubectl top` allows you to see the resource consumption for nodes or pods, and in order to use the `top` command, we have to install a metrics server.
+The `kubectl top` allows you to see the resource consumption for nodes or pods. However, in order to use the `top` command, we have to install a metrics server.
 
 Let's install a metrics server pod. To begin, let's clone the git repos below:
 

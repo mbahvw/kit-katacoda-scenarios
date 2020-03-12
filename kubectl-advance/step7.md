@@ -4,7 +4,7 @@ Using the test `nginx` container pod we created in the previous step, let's copy
 
 `kubectl cp ~/krew-install test:/tmp`{{execute}}  
 
-**Note:** *If the pod has mutiple containers, then  you need to add `-c CONTAINER_NAME` flag. If the pod is in a different namespace, you can prefix the namespace name before the pod, as shown here `kubectl cp namespace/pod-name:/dir`.*  
+**Note:** *If the pod has mutiple containers, then  you need to add `-c CONTAINER_NAME` option. If the pod is in a different namespace, you can prefix the namespace name before the pod, as shown here: `kubectl cp namespace/pod-name:/dir`.*  
 
 Let's verify whether the directory has been copied. Enter the container's shell within the pod:  
 
@@ -16,7 +16,7 @@ List the content of the /tmp directory to verify if the directory has been copie
 
 Type `exit` to exit the shell.  
 
-Let's copy from the test container to the master server's /tmp directory: 
+Now, let's copy the welcome.txt file from the test container to the master server's /tmp directory: 
 
 `kubectl cp test:/tmp/welcome.txt  /tmp`{{execute}}  
 
