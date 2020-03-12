@@ -1,6 +1,6 @@
 There are currently 80+ plugins that can be installed using the`kubectl krew install` command. Please note, these plugins are not audited for security by the Krew maintainers, therefore running them is at your own risk.
 
-Let's discover some plugins:
+Let's discover some of these plugins:
 
 `kubectl krew search`{{execute}}
 

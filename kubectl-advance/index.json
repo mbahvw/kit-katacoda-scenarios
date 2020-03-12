@@ -2,7 +2,7 @@
   "title": "Hands on with kubectl - Advanced",
   "description": "In this scenario, we will take a look at advanced concepts of Kubernetes through using kubectl.We will look at the tooling and concepts that will help you investigate and troubleshoot through a clusters.",
   "difficulty": "Advanced",
-  "time": "45 minutes",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {

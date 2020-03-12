@@ -1,4 +1,5 @@
-Let's explore some of these plugins. We can begin by listing who the current authenticated user is:  
+Let's explore some of these plugins. We can begin by listing who the current authenticated user is:
+
 `kubectl whoami`{{execute}}
 
 Let's also look at the `who-can` plugin, which is equivalent to the `kubectl auth can-i VERB [TYPE/NAME]`:  

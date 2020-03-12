@@ -11,4 +11,4 @@ Let's install `krew` by running the `install-krew.sh` script:
 
 `~/krew-install/install-krew.sh`{{execute}}
 
-The installation may take some a few minutes, so be patient with it. And when the installation is done, there is no need for you to export the PATH and restart bash.
+The installation may take some time, so be patient with it. And when the installation is done, there is no need for you to export the PATH and restart bash.
