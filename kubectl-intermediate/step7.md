@@ -1,4 +1,4 @@
-Now that we have containers deployed in different namespaces, in order to view and manipulate these resources, there are a couple of options.
+Now that we have containers deployed in different namespaces, there are a couple of options to view and manipulate these resources: 
 
 1. Add the `--namespace` flag with every `kubectl` command
 2. Switch to the appropriate namespace context where the resources live.

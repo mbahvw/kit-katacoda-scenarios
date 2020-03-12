@@ -10,10 +10,10 @@ Let's use another method to deploy a single `nginx` container application in the
 
 `kubectl run nginx --generator=run-pod/v1 --image=nginx --namespace frontend`{{execute}}
 
-*Note: The `--generator` flag tells the `kubectl run` command to pin the resource to a specific apiVersion specification. In this case apiVersion:v1 and kind:pod. This flag is being depracated*
+*Note: The `--generator` flag tells the `kubectl run` command to pin the resource to a specific apiVersion specification. In this case apiVersion:v1 and kind:pod. This flag is widely used and may get depracated in the future version releases*
 
 
-Now. let's verify if our pods have been created:
+Now. let's verify whether our pods have been created:
 
 `kubectl get pods`{{execute}}
 

@@ -8,7 +8,7 @@ You can replace the `namespace` option in the command with the `ns` option, whic
 
 For the declarative method, we have two options to create the manifest file:
 
-The first option is to use your favorite text editor and manually create a yaml manifest with the namespace specs.
+The first option is to use your favorite text editor and manually create a yaml manifest file with the namespace specs.
 
 The second option is to generate the manifest file via the `kubectl` command. Let's create another namespace and call it `backend` with this option. Type the below command and redirect the output to a file:
 

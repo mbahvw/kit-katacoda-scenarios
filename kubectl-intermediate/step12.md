@@ -29,4 +29,4 @@ In step 9, we deployed multiple pods, so let's find all the pods that were deplo
 `kubectl get pods -n frontend -o custom-columns=POD_NAME:.metadata.name,IMAGE_VER:.spec.containers[*].image`{{execute}}
 
 
-**NOTE:** *Your environment may have different CPU sizes for master and node01*
+**NOTE:** *Your environment may have a different CPU number for master and node01.*

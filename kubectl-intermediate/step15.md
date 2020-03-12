@@ -31,4 +31,4 @@ Let's change the image version back to `nginx:1.17` once more using this method.
 `kubectl rollout undo deployment/nginx-deployment --to-revision=2`{{execute}}
 
 
-**NOTE:** *Using the imperative `kubectl rollout undo` command is not best practice. The best practice is to manually edit the deployment manifest file and update the appropriate field (in this case here, spec.template.spec.containers[].image), save it, and run the `kubectl apply -f DEPPLYOMET.YAML` command. This way, the deployment manifest file is always the source of truth.*
+**NOTE:** *Using the imperative `kubectl rollout undo` command is not best practice. The best practice is to manually edit the deployment manifest file and update the appropriate field (in this case here, spec.template.spec.containers[].image), save it, and run the `kubectl apply -f DEPPLYOMET.YAML` command. This way, the deployment manifest file remains the source of truth.*

@@ -33,4 +33,4 @@ node01   4
 
 We will then need to use JSONPath ranges/loops. Let's see how ranges work in the next step.
 
-**NOTE:** *Your environment may have different CPU sizes for master and node01*
+**NOTE:** *Your environment may have a different CPU number for master and node01.*
